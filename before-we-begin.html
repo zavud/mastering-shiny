@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Your first Shiny app | Mastering Shiny</title>
+  <title>Chapter 1 Before we begin | Mastering Shiny</title>
   <meta name="description" content="The official guide to the Shiny web application framework for R." />
   <meta name="generator" content="bookdown  and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Your first Shiny app | Mastering Shiny" />
+  <meta property="og:title" content="Chapter 1 Before we begin | Mastering Shiny" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="jcheng5/shiny-book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Your first Shiny app | Mastering Shiny" />
+  <meta name="twitter:title" content="Chapter 1 Before we begin | Mastering Shiny" />
   
   <meta name="twitter:description" content="The official guide to the Shiny web application framework for R." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="before-we-begin.html">
-<link rel="next" href="basic-ui.html">
+<link rel="prev" href="index.html">
+<link rel="next" href="your-first-shiny-app.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -240,190 +240,54 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="your-first-shiny-app" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Your first Shiny app</h1>
-<div id="introduction" class="section level2 unnumbered">
-<h2>Introduction</h2>
-<p>In this chapter, we’ll create a simple Shiny app. Along the way, you’ll learn the basic structure of a Shiny app, and how to save and run Shiny apps using the RStudio IDE. You’ll also take your first steps into reactive programming.</p>
-<div id="outline" class="section level3 unnumbered">
-<h3>Outline</h3>
-<ul>
-<li>Section <a href="your-first-shiny-app.html#create-app">2.1</a> presents the minimum boilerplate that’s needed to get a Shiny app running.</li>
-<li>Section <a href="your-first-shiny-app.html#running">2.2</a> shows you how to start and stop Shiny.</li>
-<li>Section <a href="your-first-shiny-app.html#adding-ui">2.3</a> walks you through adding UI elements to your app.</li>
-<li>Section <a href="your-first-shiny-app.html#server-function">2.4</a> adds some basic behavior to the app, by adding some logic to the server function.</li>
-<li>Section <a href="your-first-shiny-app.html#reactive-expr">2.5</a> takes our server function logic a step further, with reactive expressions.</li>
-</ul>
+<div id="before-we-begin" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Before we begin</h1>
+<p>If you’ve never used Shiny before, welcome! This chapter will help you install all the software you’ll need to follow along with the book.</p>
+<div id="prerequisites" class="section level2">
+<h2><span class="header-section-number">1.1</span> Prerequisites</h2>
+<p>The first thing you’ll need to do is install the software you’ll need, if you don’t have it already:</p>
+<div id="r" class="section level3 unnumbered">
+<h3>R</h3>
+<p>If you don’t have R installed already, you may be reading the wrong book; you need to be proficient with R if you want to write Shiny apps. <a href="https://r4ds.had.co.nz/"><em>R for Data Science</em></a> is a great book for getting started with R.</p>
+<p>You can download and install R by going to <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a> and selecting one of the CRAN mirrors.</p>
+</div>
+<div id="rstudio" class="section level3 unnumbered">
+<h3>RStudio</h3>
+<p>RStudio is a free and open source <em>integrated development environment</em> (IDE) for R: a single program that includes a code editor, R console, graphics device, and many features for working productively with R.</p>
+<p>While you can write and use Shiny apps with any R environment (including R GUI and <a href="http://ess.r-project.org">ESS</a>), RStudio has some nice features specifically for authoring and debugging Shiny apps. We recommend giving it a try, but it’s not required to be successful with Shiny or with this book.</p>
+<p>You can download RStudio Desktop at:</p>
+<p><a href="https://www.rstudio.com/products/rstudio/download/" class="uri">https://www.rstudio.com/products/rstudio/download/</a></p>
+</div>
+<div id="shiny" class="section level3 unnumbered">
+<h3>Shiny</h3>
+<p>Shiny is just an R package; you install it the same way you install any R package. From the R console:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;shiny&quot;</span>)</code></pre></div>
+</div>
+<div id="other-r-packages" class="section level3 unnumbered">
+<h3>Other R packages</h3>
+<p>This book is heavy on code, and we will often use other R packages in our examples. You can install them all now by running the following:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="kw">c</span>(<span class="st">&quot;magrittr&quot;</span>, <span class="st">&quot;lubridate&quot;</span>, <span class="st">&quot;readr&quot;</span>, <span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;gt&quot;</span>))</code></pre></div>
+<p>TODO: Update this list before final draft; see <a href="https://github.com/jcheng5/shiny-book/blob/master/DESCRIPTION">DESCRIPTION</a> for the definitive list.</p>
 </div>
 </div>
-<div id="create-app" class="section level2">
-<h2><span class="header-section-number">2.1</span> Create app dir and file</h2>
-<p>There are several ways to create a Shiny app. The simplest is to create a new directory for your app, and put a single file called <code>app.R</code> in it. This <code>app.R</code> file will be used to tell Shiny both how your app should look, and how it should behave.</p>
-<p>(Tip: In RStudio IDE, you can easily create a new directory and <code>app.R</code> file in one step using <strong>File | New File | Shiny Web App</strong>.)</p>
-<p>Open up the <code>app.R</code> file and make its contents look like this:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(shiny)
-
-ui &lt;-<span class="st"> &quot;Hello, world!&quot;</span>
-
-server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {
-}
-
-<span class="kw">shinyApp</span>(ui, server)</code></pre></div>
-<p>This is a complete, if trivially simple, Shiny app. Looking closely at the code above, our <code>app.R</code> does four things:</p>
-<ol style="list-style-type: decimal">
-<li>Calls <code>library(shiny)</code> to load the package.</li>
-<li>Defines the user interface (UI) for our app—in this case, nothing but the words “Hello, world!”</li>
-<li>Specifies the behavior of our app by defining a <code>server</code> function. Currently empty, but we’ll be back to revisit this shortly.</li>
-<li>Calls <code>shinyApp(ui, server)</code> to construct a Shiny application object from the UI and server previously defined.</li>
-</ol>
+<div id="cheat-sheet" class="section level2">
+<h2><span class="header-section-number">1.2</span> Cheat sheet</h2>
+<p>You may find it helpful to print a copy of our Shiny “cheat sheet”, a reference card for many of the most important concepts and functions in Shiny. It won’t all make sense to you yet, but as you work through the chapters you’ll find it more and more helpful to refresh your memory.</p>
+<p><a href="https://www.rstudio.com/resources/cheatsheets/" class="uri">https://www.rstudio.com/resources/cheatsheets/</a></p>
 </div>
-<div id="running" class="section level2">
-<h2><span class="header-section-number">2.2</span> Running and stopping</h2>
-<p>Run this Shiny app in RStudio now by pressing <code>Ctrl+Shift+Enter</code>, or by clicking the <strong>Run App</strong> button in the document toolbar; go ahead and try either.</p>
-<p>If you’re not using RStudio, you can use <code>setwd()</code> to change the current working directory to the app dir, and call <code>shiny::runApp()</code> (or alternatively, don’t change the current working directory and pass the path to the app dir to <code>runApp()</code> as an argument).</p>
-<p>You should see a web application launch in a new window, with only the words “Hello, world!”</p>
-<p><img src="images/02-your-first-shiny-app/helloworld.png" /><!-- --></p>
-<p>This is RStudio’s Shiny app window. From here, you can click “Open in Browser” to view the app in your system default web browser, which can be helpful for testing or debugging. (If you prefer to always launch straight into your system default web browser, or alternatively, in RStudio’s Viewer pane, you can use the Run App button’s dropdown menu to choose one of those instead.)</p>
-<p>Before you close the app, go back to your main RStudio window and look at the R console. You’ll notice that the console says something like: “Listening on <a href="http://127.0.0.1:3827" class="uri">http://127.0.0.1:3827</a>”. This is telling you the URL where your app can be found: 127.0.0.1 is a standard address that means “this computer” and 3827 is a port number. (Your port number will likely be different, as Shiny chooses a random port number for each R session, to make it easy to run multiple Shiny apps simultaneously.) You can enter that URL into any compatible<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> web browser to open another copy of your app.</p>
-<p>The second thing to notice is that R is busy: the R prompt isn’t visible, and the console toolbar displays a stop sign icon. While a Shiny app is running, it “blocks” the R console. You can’t run new commands at the R console until after the Shiny app either stops of its own accord, or (much more commonly) is interrupted.</p>
-<p>Go ahead and stop your app using any one of these options:</p>
-<ul>
-<li>Click the stop sign icon on the R console toolbar</li>
-<li>Press the <code>Esc</code> key (Note: the keyboard focus must be in either the RStudio console or editor)</li>
-<li>Close the Shiny app window</li>
-<li>Non-RStudio users: However you normally interrupt running R code, e.g. <code>Ctrl+C</code> or <code>Esc</code></li>
-</ul>
-</div>
-<div id="adding-ui" class="section level2">
-<h2><span class="header-section-number">2.3</span> Adding UI controls</h2>
-<p>Next, we’ll add some inputs and outputs to our UI so it’s not <em>quite</em> so minimal. Change your <code>ui</code> variable to look like this:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(
-  <span class="kw">selectInput</span>(<span class="st">&quot;dataset&quot;</span>, <span class="dt">label =</span> <span class="st">&quot;Dataset&quot;</span>,
-    <span class="dt">choices =</span> <span class="kw">ls</span>(<span class="st">&quot;package:datasets&quot;</span>)
-  ),
-  <span class="kw">verbatimTextOutput</span>(<span class="st">&quot;summary&quot;</span>),
-  <span class="kw">tableOutput</span>(<span class="st">&quot;table&quot;</span>)
-)</code></pre></div>
-<p>This example uses four functions we haven’t seen before.</p>
-<ul>
-<li><code>fluidPage</code> is one of several <strong>layout functions</strong>, designed to take other UI objects as arguments, and renders them with some kind of modification. In this case, <code>fluidPage</code> brings in a bunch of CSS styling, from the famous <a href="http://getbootstrap.com/docs/3.3/">Bootstrap</a> CSS library. It also inserts a container that is suitable for splitting into rows and columns (though we aren’t ready to do that just yet).</li>
-<li><code>selectInput</code> is an <strong>input control</strong>, which lets the user interact with the app by providing a value. In this case, it’s a fancy select box with the title “Dataset” and lets you choose one of the built-in datasets that come with R.</li>
-<li><code>verbatimTextOutput</code> and <code>tableOutput</code> are <strong>output controls</strong>, telling Shiny <em>where</em> to put rendered output (we’ll get into the <em>how</em> in a moment). <code>verbatimTextOutput</code> displays preformatted text (in HTML parlance, it uses a <code>&lt;pre&gt;</code> tag), and <code>tableOutput</code> displays tabular data (e.g. a data frame or matrix) in a nice looking HTML table.</li>
-</ul>
-<p>Go ahead and run the app again. You’ll now see a select box with a set of names, and very little else. We’ve defined the UI, but haven’t yet told Shiny what data to put in the outputs.</p>
-<p>Layout functions and input/output controls are used for different purposes, but they’re similar in a pretty fundamental way: <strong>they’re all just fancy ways to generate HTML</strong>. If you execute any of these function calls, you’ll see HTML printed out at the console. Don’t be afraid to poke around to see how these various layouts and controls work under the hood. Later in this book (TODO: XREF), we’ll show you how to create your own custom HTML-generating functions.</p>
-<div id="input-and-output-ids" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> Input and output IDs</h3>
-<p>Another important property that input and output controls share is that <strong>they always take an ID string as their first argument</strong>. In this case, we’ve used <code>&quot;dataset&quot;</code>, <code>&quot;summary&quot;</code>, and <code>&quot;table&quot;</code> as the identifiers for these inputs and outputs. We’ll use these identifiers in the next step to read from inputs and write to outputs.</p>
-<p>It’s absolutely critical that identifiers be unique! In a given app, you can’t have two inputs named <code>&quot;dataset&quot;</code>, two outputs named <code>&quot;plot&quot;</code>, or an input and an output named <code>&quot;choices&quot;</code>. No matter how complex your app gets, you must make sure every ID is unique (though we’ll talk about one approach to keep this manageable in the chapter on modules (TODO: XREF)).</p>
-<p>You should also avoid using special characters in your identifiers, especially space and dash. Generally, it’s best to stick to the kind of names you’d use for variables or data frame columns in R, with the added restriction of avoiding periods. (Like R, numbers and underscores may not start an identifier, but they are permitted elsewhere.)</p>
-</div>
-</div>
-<div id="server-function" class="section level2">
-<h2><span class="header-section-number">2.4</span> Adding behavior</h2>
-<p>Next, we’ll bring the outputs to life by defining them in the server function.</p>
-<p>You may be aware that Shiny uses a <em>reactive programming</em> framework to make apps interactive. We’ll explore reactive programming in much more detail in a future chapter (TODO: XREF), but for now, just be aware that it often involves telling Shiny <em>how</em> to perform a computation, not ordering Shiny to actually go <em>do it</em>. It’s like the difference between giving someone a recipe, versus demanding they go make you a sandwich.</p>
-<p>In this simple case, we’re going to tell Shiny how to fill in the <code>summary</code> and <code>table</code> outputs—we’re providing the “recipes” for those outputs. Replace your empty <code>server</code> function with this:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {
-  output<span class="op">$</span>summary &lt;-<span class="st"> </span><span class="kw">renderPrint</span>({
-    dataset &lt;-<span class="st"> </span><span class="kw">get</span>(input<span class="op">$</span>dataset, <span class="st">&quot;package:datasets&quot;</span>, <span class="dt">inherits =</span> <span class="ot">FALSE</span>)
-    <span class="kw">summary</span>(dataset)
-  })
-  
-  output<span class="op">$</span>table &lt;-<span class="st"> </span><span class="kw">renderTable</span>({
-    dataset &lt;-<span class="st"> </span><span class="kw">get</span>(input<span class="op">$</span>dataset, <span class="st">&quot;package:datasets&quot;</span>, <span class="dt">inherits =</span> <span class="ot">FALSE</span>)
-    dataset
-  })
-}</code></pre></div>
-<p>Almost every output you’ll write in Shiny will follow this same pattern.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">output<span class="op">$</span>IDENTIFIER &lt;-<span class="st"> </span><span class="kw">renderTYPE</span>({
-  <span class="co"># Expression that generates whatever kind of output</span>
-  <span class="co"># renderTYPE expects</span>
-})</code></pre></div>
-<p>The left-hand side of the assignment operator (<code>&lt;-</code>), <code>output$IDENTIFIER</code>, indicates that you’re providing the recipe for the Shiny output with the matching ID. (Note that the ID is provided in quotes in the UI, but without quotes in the server.)</p>
-<p>The right-hand side of the assignment specifies uses a specific <em>render function</em> to wrap a code block that you provide; in the example above, we use <code>renderPrint</code> and <code>renderTable</code> wrap our app-specific logic. Each <code>renderXXX</code> function is designed to work with a particular <code>xxxOutput</code> function (and vice versa).</p>
-<p>Each <code>renderXXX</code> function also has expectations about what kind of objects should be returned (or what actions taken, like plotting or printing to the console) from its code block.</p>
-<p>In this case, we’re using <code>renderPrint</code> for the <code>summary</code> output. <code>renderPrint</code> is designed to be used with <code>verbatimTextOutput</code>. Whenever <code>renderPrint</code> executes its code body, it captures any output that would normally go to the R console, and sends it to the <code>verbatimTextOutput</code>.</p>
-<p>Similarly, the <code>renderTable</code> we’re using for the <code>table</code> output must always be used with <code>tableOutput</code>. <code>renderTable</code> doesn’t care about what’s printed to the R console, but it does want its code block to return either <code>NULL</code>, or a data frame or matrix.</p>
-<p><strong>Outputs are <em>reactive</em>; Shiny automatically knows when to recalculate them.</strong> Because both of the rendering code blocks we wrote read <code>input$dataset</code>, whenever the value of <code>input$dataset</code> changes (i.e. the user changes their selection in the UI), both outputs will recalculate and update in the browser.</p>
-</div>
-<div id="reactive-expr" class="section level2">
-<h2><span class="header-section-number">2.5</span> Extracting common values with reactive expressions</h2>
-<p>Even in this simple example, we have some code that’s duplicated: the line</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dataset &lt;-<span class="st"> </span><span class="kw">get</span>(input<span class="op">$</span>dataset, <span class="st">&quot;package:datasets&quot;</span>, <span class="dt">inherits =</span> <span class="ot">FALSE</span>)</code></pre></div>
-<p>is present in both outputs. In every kind of programming, it’s poor practice to have duplicated code; it can be computationally wasteful, and more importantly, it increases the difficulty of maintaining or debugging the code.</p>
-<p>In traditional R scripting, we use two techniques to deal with duplicated code: either we capture the value using a <em>variable</em> (if we only need to do the calculation once), or capture the computation itself using a <em>function</em> (if we need to perform the calculation multiple times, possibly based on different inputs).</p>
-<p>But often in reactive programming, neither of these choices satisfy. Using a variable won’t work:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Don&#39;t do this!</span>
-server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {
-  dataset &lt;-<span class="st"> </span><span class="kw">get</span>(input<span class="op">$</span>dataset, <span class="st">&quot;package:datasets&quot;</span>, <span class="dt">inherits =</span> <span class="ot">FALSE</span>)
-
-  output<span class="op">$</span>summary &lt;-<span class="st"> </span><span class="kw">renderPrint</span>({
-    <span class="kw">summary</span>(dataset)
-  })
-  
-  output<span class="op">$</span>table &lt;-<span class="st"> </span><span class="kw">renderTable</span>({
-    dataset
-  })
-}</code></pre></div>
-<p>In this code, we’re attempting to calculate the value of <code>dataset</code> just once, as the session starts. But the value of <code>input$dataset</code> may change over time. We noted a few paragraphs ago that Shiny outputs are reactive (they re-execute as necessary); the same cannot be said for free-floating code like this. So the result of extracting a variable like this is tha the <code>dataset</code> variable will assume some value at startup based on the initial value of <code>input$dataset</code>, and stay at that value forever. This is clearly not what we want, and is such an easy trap to fall into that in fact Shiny detects this condition and throws an error immediately.</p>
-<p>If using a variable won’t work, how about a function? This will work, and takes care of the code duplication, but it does result in duplicated effort:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Don&#39;t do this!</span>
-server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {
-  getDataset &lt;-<span class="st"> </span><span class="cf">function</span>() {
-    <span class="kw">get</span>(input<span class="op">$</span>dataset, <span class="st">&quot;package:datasets&quot;</span>, <span class="dt">inherits =</span> <span class="ot">FALSE</span>)
-  }
-
-  output<span class="op">$</span>summary &lt;-<span class="st"> </span><span class="kw">renderPrint</span>({
-    <span class="kw">summary</span>(<span class="kw">getDataset</span>())
-  })
-  
-  output<span class="op">$</span>table &lt;-<span class="st"> </span><span class="kw">renderTable</span>({
-    <span class="kw">getDataset</span>()
-  })
-}</code></pre></div>
-<p>We get the correct behavior this time, at least—we’re calling <code>getDataset()</code> from within our output code, so Shiny will know to recalculate the outputs when <code>input$dataset</code> changes. However, for each change to <code>input$dataset</code>, <code>getDataset</code> is going to be called twice, and its work is therefore going to be performed twice. (In this example, the work being done in <code>getDataset</code> is totally trivial so it doesn’t actually matter; just imagine we’re doing a more expensive operation like retrieving a dataset from a web service or database, or fitting a model over a large dataset, or performing simulations.)</p>
-<p>Reactive programming needs a different mechanism than variables or functions, for reusing calculated values. Fortunately, Shiny provides just that in the form of <strong>reactive expressions</strong>, created by wrapping a block of code with <code>reactive({...})</code>. You assign the reactive expression object to a variable, and <em>call the variable like a function</em> to retrieve its value.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Much better</span>
-server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {
-  dataset &lt;-<span class="st"> </span><span class="kw">reactive</span>({
-    <span class="kw">get</span>(input<span class="op">$</span>dataset, <span class="st">&quot;package:datasets&quot;</span>, <span class="dt">inherits =</span> <span class="ot">FALSE</span>)
-  })
-
-  output<span class="op">$</span>summary &lt;-<span class="st"> </span><span class="kw">renderPrint</span>({
-    <span class="kw">summary</span>(<span class="kw">dataset</span>())
-  })
-  
-  output<span class="op">$</span>table &lt;-<span class="st"> </span><span class="kw">renderTable</span>({
-    <span class="kw">dataset</span>()
-  })
-}</code></pre></div>
-<p>This looks much like the previous example, where we introduced a <code>getDataset</code> function. But a reactive expression behaves differently than a function: it only runs its code the first time it is called (e.g. from <code>renderPrint</code> and <code>renderTable</code>), then caches the resulting value until reactivity gives it a reason to believe its cached result is no longer valid (in this case, a change to <code>input$dataset</code> would be the only reason). Once that happens, the next time it’s called, it will execute its code again, and cache the resulting value, and so on.</p>
-<p>To summarize: while variables calculate the value only once (not often enough), and functions calculate the value every time they’re called (too often), reactive expressions calculate the value only when it might have changed (just right!).</p>
-<p>We’ll get into reactive programming much more in a later chapter (TODO: XREF), but even armed with a cursory knowledge of inputs, outputs, and reactive expressions, it’s possible to build quite useful Shiny apps!</p>
-</div>
-<div id="exercises" class="section level2">
-<h2><span class="header-section-number">2.6</span> Exercises</h2>
-<p>TODO</p>
+<div id="if-you-get-stuck" class="section level2">
+<h2><span class="header-section-number">1.3</span> If you get stuck</h2>
+<p>Got a problem you can’t figure out, or a question this book (and Google) can’t answer? You can find help at our community site: <a href="https://community.rstudio.com/c/shiny" class="uri">https://community.rstudio.com/c/shiny</a>.</p>
 
 </div>
-</div>
-
-
-
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>Notably, Internet Explorer versions earlier than IE11 are not compatible when running Shiny directly from your R session. However, Shiny apps deployed on Shiny Server or ShinyApps.io can work with IE10 (earlier versions of IE are no longer supported).<a href="your-first-shiny-app.html#fnref1">↩</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="before-we-begin.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="basic-ui.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="your-first-shiny-app.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -453,7 +317,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-your-first-app.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-getting-started.Rmd",
 "text": "Edit"
 },
 "history": {
