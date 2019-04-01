@@ -167,7 +167,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.4.1" data-path="advanced-ui.html"><a href="advanced-ui.html#creating-html-dependency-objects"><i class="fa fa-check"></i><b>4.4.1</b> Creating HTML dependency objects</a></li>
 <li class="chapter" data-level="4.4.2" data-path="advanced-ui.html"><a href="advanced-ui.html#using-html-dependency-objects"><i class="fa fa-check"></i><b>4.4.2</b> Using HTML dependency objects</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="advanced-ui.html"><a href="advanced-ui.html#html-templates"><i class="fa fa-check"></i><b>4.5</b> HTML templates</a></li>
 </ul></li>
 <li class="part"><span><b>Reactive programming</b></span></li>
 <li class="chapter" data-level="5" data-path="reactive-programming-basics.html"><a href="reactive-programming-basics.html"><i class="fa fa-check"></i><b>5</b> Reactive programming basics</a><ul>
@@ -256,7 +255,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Section <a href="advanced-ui.html#generating-html">4.2</a> introduces tag objects, and the family of functions that produce them. These functions give us all the flexibility of writing raw HTML, while still retaining the power and syntax of R.</li>
 <li>Section <a href="advanced-ui.html#using-css">4.3</a> demonstrates several ways of incorporating custom CSS into your app (for example, to customize fonts and colors).</li>
 <li>Section <a href="advanced-ui.html#dependencies">4.4</a> introduces HTML dependency objects, which can be used to tell Shiny about JavaScript/CSS dependency files that should be used.</li>
-<li>Section <a href="#html-template"><strong>??</strong></a> shows how you can combine tag objects with raw .html files, using the <strong>HTML templates</strong> feature.</li>
 </ul>
 </div>
 </div>
@@ -629,9 +627,9 @@ footer div<span class="fl">.alert</span> <span class="kw">{</span>
 <p>For example, the <code>sliderInput</code> that comes with Shiny happens to be implemented using a JavaScript library called <a href="http://ionden.com/a/plugins/ion.rangeSlider/">ionRangeSlider</a>. With the traditional approach, if you wanted to add a <code>sliderInput</code> to your Shiny app, you’d also have to make a separate declaration somewhere in your UI to load the .js and .css files for ionRangeSlider. And you’d have to make sure that you only make that declaration once per page, lest you accidentally load a library twice, which can cause some libraries to stop working.</p>
 <p>For Shiny, we wanted instead to have R users simply call <code>sliderInput()</code>, and let us sort out the necessary dependencies automatically. In fact, we want R users to be able to combine whatever UI objects they want, and just not think about dependencies at all.</p>
 <p>To make this possible, we created a first-class object for HTML dependencies.</p>
+<p>An HTML dependency object is a description of a single JavaScript/CSS library. As a Shiny app author, you generally don’t create these directly. Instead, these objects are created by package authors who want to make reusable UI functions that depend on external JavaScript/CSS—like <code>sliderInput()</code>. If you’re such a package author, you absolutely should be using HTML dependency objects rather than calling <code>tags$link()</code>, <code>tags$script()</code>, or <code>includeCSS</code> directly.</p>
 <div id="creating-html-dependency-objects" class="section level3">
 <h3><span class="header-section-number">4.4.1</span> Creating HTML dependency objects</h3>
-<p>An HTML dependency object is a description of a single JavaScript/CSS library. As a Shiny app author, you generally don’t create these directly. Instead, these objects are created by package authors who want to make reusable UI functions that depend on external JavaScript/CSS—like <code>sliderInput()</code>.</p>
 <p>To form such an object, you call <code>htmlDependency</code> with the following arguments:</p>
 <ol style="list-style-type: decimal">
 <li><code>name</code>: The name of the library.</li>
@@ -641,7 +639,7 @@ footer div<span class="fl">.alert</span> <span class="kw">{</span>
 <li><code>stylesheet</code>: Relative paths to CSS files that should be loaded.</li>
 </ol>
 <p>Here’s an example from the <a href="https://github.com/rstudio/leaflet.mapboxgl">leaflet.mapboxgl</a> package:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">htmlDependency</span>(
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mapbox_gl_dependency &lt;-<span class="st"> </span><span class="kw">htmlDependency</span>(
   <span class="st">&quot;mapbox-gl&quot;</span>,
   <span class="st">&quot;0.53.1&quot;</span>,
   <span class="dt">src =</span> <span class="st">&quot;node_modules/mapbox-gl/dist&quot;</span>,
@@ -659,12 +657,16 @@ footer div<span class="fl">.alert</span> <span class="kw">{</span>
 <h3><span class="header-section-number">4.4.2</span> Using HTML dependency objects</h3>
 <p>Once you’ve created an HTML dependency object, using it is straightforward.</p>
 <p>If you have a function that returns a tag object, have that function return a tag object and dependency instead, using a <code>tagList</code>.</p>
-</div>
-</div>
-<div id="html-templates" class="section level2">
-<h2><span class="header-section-number">4.5</span> HTML templates</h2>
-<p>TODO</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">create_mapbox_map &lt;-<span class="st"> </span><span class="cf">function</span>(map_id) {
+  <span class="kw">tagList</span>(
+    <span class="kw">div</span>(<span class="dt">id =</span> map_id),
+    mapbox_gl_dependency
+  )
+}</code></pre></div>
+<p>You can bundle any number of dependencies with your HTML this way; just add additional dependency arguments to the <code>tagList</code>.</p>
+<p>TODO: Exercises?</p>
 
+</div>
 </div>
 </div>
 
