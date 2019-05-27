@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="your-first-shiny-app.html">
-<link rel="next" href="advanced-ui.html">
+<link rel="next" href="reactivity-intro.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -118,107 +118,108 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.3" data-path="before-we-begin.html"><a href="before-we-begin.html#if-you-get-stuck"><i class="fa fa-check"></i><b>1.3</b> If you get stuck</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your first Shiny app</a><ul>
-<li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#introduction"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a><ul>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#outline"><i class="fa fa-check"></i>Outline</a></li>
 </ul></li>
-<li class="chapter" data-level="2.1" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#create-app"><i class="fa fa-check"></i><b>2.1</b> Create app dir and file</a></li>
-<li class="chapter" data-level="2.2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#running"><i class="fa fa-check"></i><b>2.2</b> Running and stopping</a></li>
-<li class="chapter" data-level="2.3" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#adding-ui"><i class="fa fa-check"></i><b>2.3</b> Adding UI controls</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#input-and-output-ids"><i class="fa fa-check"></i><b>2.3.1</b> Input and output IDs</a></li>
+<li class="chapter" data-level="2.2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#create-app"><i class="fa fa-check"></i><b>2.2</b> Create app dir and file</a></li>
+<li class="chapter" data-level="2.3" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#running"><i class="fa fa-check"></i><b>2.3</b> Running and stopping</a></li>
+<li class="chapter" data-level="2.4" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#adding-ui"><i class="fa fa-check"></i><b>2.4</b> Adding UI controls</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#input-and-output-ids"><i class="fa fa-check"></i><b>2.4.1</b> Input and output IDs</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#server-function"><i class="fa fa-check"></i><b>2.4</b> Adding behavior</a></li>
-<li class="chapter" data-level="2.5" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#reactive-expr"><i class="fa fa-check"></i><b>2.5</b> Extracting common values with reactive expressions</a></li>
-<li class="chapter" data-level="2.6" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercises"><i class="fa fa-check"></i><b>2.6</b> Exercises</a></li>
+<li class="chapter" data-level="2.5" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#server-function"><i class="fa fa-check"></i><b>2.5</b> Adding behavior</a></li>
+<li class="chapter" data-level="2.6" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#reactive-expr"><i class="fa fa-check"></i><b>2.6</b> Extracting common values with reactive expressions</a></li>
+<li class="chapter" data-level="2.7" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercises"><i class="fa fa-check"></i><b>2.7</b> Exercises</a></li>
 </ul></li>
-<li class="part"><span><b>Creating user interfaces</b></span></li>
 <li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a><ul>
-<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#introduction-1"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="3.1" data-path="basic-ui.html"><a href="basic-ui.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a><ul>
+<li class="chapter" data-level="" data-path="before-we-begin.html"><a href="before-we-begin.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#outline-1"><i class="fa fa-check"></i>Outline</a></li>
 </ul></li>
-<li class="chapter" data-level="3.1" data-path="basic-ui.html"><a href="basic-ui.html#inputs"><i class="fa fa-check"></i><b>3.1</b> Inputs</a></li>
-<li class="chapter" data-level="3.2" data-path="basic-ui.html"><a href="basic-ui.html#outputs"><i class="fa fa-check"></i><b>3.2</b> Outputs</a></li>
-<li class="chapter" data-level="3.3" data-path="basic-ui.html"><a href="basic-ui.html#layout"><i class="fa fa-check"></i><b>3.3</b> Layouts and panels</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="basic-ui.html"><a href="basic-ui.html#page-functions"><i class="fa fa-check"></i><b>3.3.1</b> Page functions</a></li>
+<li class="chapter" data-level="3.2" data-path="basic-ui.html"><a href="basic-ui.html#inputs"><i class="fa fa-check"></i><b>3.2</b> Inputs</a></li>
+<li class="chapter" data-level="3.3" data-path="basic-ui.html"><a href="basic-ui.html#outputs"><i class="fa fa-check"></i><b>3.3</b> Outputs</a></li>
+<li class="chapter" data-level="3.4" data-path="basic-ui.html"><a href="basic-ui.html#layout"><i class="fa fa-check"></i><b>3.4</b> Layouts</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="basic-ui.html"><a href="basic-ui.html#page-functions"><i class="fa fa-check"></i><b>3.4.1</b> Page functions</a></li>
+<li class="chapter" data-level="3.4.2" data-path="basic-ui.html"><a href="basic-ui.html#page-with-sidebar"><i class="fa fa-check"></i><b>3.4.2</b> Page with sidebar</a></li>
+<li class="chapter" data-level="3.4.3" data-path="basic-ui.html"><a href="basic-ui.html#multi-row"><i class="fa fa-check"></i><b>3.4.3</b> Multi-row</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="advanced-ui.html"><a href="advanced-ui.html"><i class="fa fa-check"></i><b>4</b> Advanced UI</a><ul>
-<li class="chapter" data-level="" data-path="advanced-ui.html"><a href="advanced-ui.html#introduction-2"><i class="fa fa-check"></i>Introduction</a><ul>
-<li class="chapter" data-level="" data-path="advanced-ui.html"><a href="advanced-ui.html#outline-2"><i class="fa fa-check"></i>Outline</a></li>
+<li class="chapter" data-level="4" data-path="reactivity-intro.html"><a href="reactivity-intro.html"><i class="fa fa-check"></i><b>4</b> Reactive programming basics</a><ul>
+<li class="chapter" data-level="4.1" data-path="reactivity-intro.html"><a href="reactivity-intro.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a><ul>
+<li class="chapter" data-level="" data-path="reactivity-intro.html"><a href="reactivity-intro.html#outline-2"><i class="fa fa-check"></i>Outline</a></li>
 </ul></li>
-<li class="chapter" data-level="4.1" data-path="advanced-ui.html"><a href="advanced-ui.html#introduction-to-html"><i class="fa fa-check"></i><b>4.1</b> HTML 101</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="advanced-ui.html"><a href="advanced-ui.html#inline-formatting-tags"><i class="fa fa-check"></i><b>4.1.1</b> Inline formatting tags</a></li>
-<li class="chapter" data-level="4.1.2" data-path="advanced-ui.html"><a href="advanced-ui.html#block-tags"><i class="fa fa-check"></i><b>4.1.2</b> Block tags</a></li>
-<li class="chapter" data-level="4.1.3" data-path="advanced-ui.html"><a href="advanced-ui.html#tags-with-attributes"><i class="fa fa-check"></i><b>4.1.3</b> Tags with attributes</a></li>
-<li class="chapter" data-level="4.1.4" data-path="advanced-ui.html"><a href="advanced-ui.html#parents-and-children"><i class="fa fa-check"></i><b>4.1.4</b> Parents and children</a></li>
-<li class="chapter" data-level="4.1.5" data-path="advanced-ui.html"><a href="advanced-ui.html#comments"><i class="fa fa-check"></i><b>4.1.5</b> Comments</a></li>
-<li class="chapter" data-level="4.1.6" data-path="advanced-ui.html"><a href="advanced-ui.html#escaping"><i class="fa fa-check"></i><b>4.1.6</b> Escaping</a></li>
-<li class="chapter" data-level="4.1.7" data-path="advanced-ui.html"><a href="advanced-ui.html#html-tag-vocabulary"><i class="fa fa-check"></i><b>4.1.7</b> HTML tag vocabulary</a></li>
+<li class="chapter" data-level="4.2" data-path="reactivity-intro.html"><a href="reactivity-intro.html#the-server-function"><i class="fa fa-check"></i><b>4.2</b> The server function</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="reactivity-intro.html"><a href="reactivity-intro.html#server-function-parameters"><i class="fa fa-check"></i><b>4.2.1</b> Server function parameters</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="advanced-ui.html"><a href="advanced-ui.html#generating-html"><i class="fa fa-check"></i><b>4.2</b> Generating HTML with tag objects</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="advanced-ui.html"><a href="advanced-ui.html#using-functions-to-create-tags"><i class="fa fa-check"></i><b>4.2.1</b> Using functions to create tags</a></li>
-<li class="chapter" data-level="4.2.2" data-path="advanced-ui.html"><a href="advanced-ui.html#using-named-arguments-to-create-attributes"><i class="fa fa-check"></i><b>4.2.2</b> Using named arguments to create attributes</a></li>
-<li class="chapter" data-level="4.2.3" data-path="advanced-ui.html"><a href="advanced-ui.html#using-unnamed-arguments-to-create-children"><i class="fa fa-check"></i><b>4.2.3</b> Using unnamed arguments to create children</a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="advanced-ui.html"><a href="advanced-ui.html#using-css"><i class="fa fa-check"></i><b>4.3</b> Customizing with CSS</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="advanced-ui.html"><a href="advanced-ui.html#introduction-to-css"><i class="fa fa-check"></i><b>4.3.1</b> Introduction to CSS</a></li>
-<li class="chapter" data-level="4.3.2" data-path="advanced-ui.html"><a href="advanced-ui.html#including-custom-css-in-shiny"><i class="fa fa-check"></i><b>4.3.2</b> Including custom CSS in Shiny</a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="advanced-ui.html"><a href="advanced-ui.html#dependencies"><i class="fa fa-check"></i><b>4.4</b> Managing JavaScript/CSS dependencies</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="advanced-ui.html"><a href="advanced-ui.html#creating-html-dependency-objects"><i class="fa fa-check"></i><b>4.4.1</b> Creating HTML dependency objects</a></li>
-<li class="chapter" data-level="4.4.2" data-path="advanced-ui.html"><a href="advanced-ui.html#using-html-dependency-objects"><i class="fa fa-check"></i><b>4.4.2</b> Using HTML dependency objects</a></li>
+<li class="chapter" data-level="4.3" data-path="reactivity-intro.html"><a href="reactivity-intro.html#input"><i class="fa fa-check"></i><b>4.3</b> Input</a></li>
+<li class="chapter" data-level="4.4" data-path="reactivity-intro.html"><a href="reactivity-intro.html#output"><i class="fa fa-check"></i><b>4.4</b> Output</a></li>
+<li class="chapter" data-level="4.5" data-path="reactivity-intro.html"><a href="reactivity-intro.html#inputs-and-outputs"><i class="fa fa-check"></i><b>4.5</b> Using inputs from outputs</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="reactivity-intro.html"><a href="reactivity-intro.html#outputs-are-atomic"><i class="fa fa-check"></i><b>4.5.1</b> Outputs are atomic</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>Reactive programming</b></span></li>
-<li class="chapter" data-level="5" data-path="reactive-programming-basics.html"><a href="reactive-programming-basics.html"><i class="fa fa-check"></i><b>5</b> Reactive programming basics</a><ul>
-<li class="chapter" data-level="" data-path="reactive-programming-basics.html"><a href="reactive-programming-basics.html#introduction-3"><i class="fa fa-check"></i>Introduction</a><ul>
-<li class="chapter" data-level="" data-path="reactive-programming-basics.html"><a href="reactive-programming-basics.html#outline-3"><i class="fa fa-check"></i>Outline</a></li>
+<li class="part"><span><b>Mastering user interfaces</b></span></li>
+<li class="chapter" data-level="5" data-path="advanced-ui.html"><a href="advanced-ui.html"><i class="fa fa-check"></i><b>5</b> Advanced UI</a><ul>
+<li class="chapter" data-level="5.1" data-path="advanced-ui.html"><a href="advanced-ui.html#introduction-3"><i class="fa fa-check"></i><b>5.1</b> Introduction</a><ul>
+<li class="chapter" data-level="" data-path="advanced-ui.html"><a href="advanced-ui.html#outline-3"><i class="fa fa-check"></i>Outline</a></li>
 </ul></li>
-<li class="chapter" data-level="5.1" data-path="reactive-programming-basics.html"><a href="reactive-programming-basics.html#the-server-function"><i class="fa fa-check"></i><b>5.1</b> The server function</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="reactive-programming-basics.html"><a href="reactive-programming-basics.html#server-function-parameters"><i class="fa fa-check"></i><b>5.1.1</b> Server function parameters</a></li>
+<li class="chapter" data-level="5.2" data-path="advanced-ui.html"><a href="advanced-ui.html#introduction-to-html"><i class="fa fa-check"></i><b>5.2</b> HTML 101</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="advanced-ui.html"><a href="advanced-ui.html#inline-formatting-tags"><i class="fa fa-check"></i><b>5.2.1</b> Inline formatting tags</a></li>
+<li class="chapter" data-level="5.2.2" data-path="advanced-ui.html"><a href="advanced-ui.html#block-tags"><i class="fa fa-check"></i><b>5.2.2</b> Block tags</a></li>
+<li class="chapter" data-level="5.2.3" data-path="advanced-ui.html"><a href="advanced-ui.html#tags-with-attributes"><i class="fa fa-check"></i><b>5.2.3</b> Tags with attributes</a></li>
+<li class="chapter" data-level="5.2.4" data-path="advanced-ui.html"><a href="advanced-ui.html#parents-and-children"><i class="fa fa-check"></i><b>5.2.4</b> Parents and children</a></li>
+<li class="chapter" data-level="5.2.5" data-path="advanced-ui.html"><a href="advanced-ui.html#comments"><i class="fa fa-check"></i><b>5.2.5</b> Comments</a></li>
+<li class="chapter" data-level="5.2.6" data-path="advanced-ui.html"><a href="advanced-ui.html#escaping"><i class="fa fa-check"></i><b>5.2.6</b> Escaping</a></li>
+<li class="chapter" data-level="5.2.7" data-path="advanced-ui.html"><a href="advanced-ui.html#html-tag-vocabulary"><i class="fa fa-check"></i><b>5.2.7</b> HTML tag vocabulary</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="reactive-programming-basics.html"><a href="reactive-programming-basics.html#input"><i class="fa fa-check"></i><b>5.2</b> Input</a></li>
-<li class="chapter" data-level="5.3" data-path="reactive-programming-basics.html"><a href="reactive-programming-basics.html#output"><i class="fa fa-check"></i><b>5.3</b> Output</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="reactive-programming-basics.html"><a href="reactive-programming-basics.html#imperative-vs.declarative"><i class="fa fa-check"></i><b>5.3.1</b> Imperative vs. declarative</a></li>
+<li class="chapter" data-level="5.3" data-path="advanced-ui.html"><a href="advanced-ui.html#generating-html"><i class="fa fa-check"></i><b>5.3</b> Generating HTML with tag objects</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="advanced-ui.html"><a href="advanced-ui.html#using-functions-to-create-tags"><i class="fa fa-check"></i><b>5.3.1</b> Using functions to create tags</a></li>
+<li class="chapter" data-level="5.3.2" data-path="advanced-ui.html"><a href="advanced-ui.html#using-named-arguments-to-create-attributes"><i class="fa fa-check"></i><b>5.3.2</b> Using named arguments to create attributes</a></li>
+<li class="chapter" data-level="5.3.3" data-path="advanced-ui.html"><a href="advanced-ui.html#using-unnamed-arguments-to-create-children"><i class="fa fa-check"></i><b>5.3.3</b> Using unnamed arguments to create children</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="reactive-programming-basics.html"><a href="reactive-programming-basics.html#inputs-and-outputs"><i class="fa fa-check"></i><b>5.4</b> Using inputs from outputs</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="reactive-programming-basics.html"><a href="reactive-programming-basics.html#outputs-are-atomic"><i class="fa fa-check"></i><b>5.4.1</b> Outputs are atomic</a></li>
+<li class="chapter" data-level="5.4" data-path="advanced-ui.html"><a href="advanced-ui.html#using-css"><i class="fa fa-check"></i><b>5.4</b> Customizing with CSS</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="advanced-ui.html"><a href="advanced-ui.html#introduction-to-css"><i class="fa fa-check"></i><b>5.4.1</b> Introduction to CSS</a></li>
+<li class="chapter" data-level="5.4.2" data-path="advanced-ui.html"><a href="advanced-ui.html#including-custom-css-in-shiny"><i class="fa fa-check"></i><b>5.4.2</b> Including custom CSS in Shiny</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="advanced-ui.html"><a href="advanced-ui.html#dependencies"><i class="fa fa-check"></i><b>5.5</b> Managing JavaScript/CSS dependencies</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="advanced-ui.html"><a href="advanced-ui.html#creating-html-dependency-objects"><i class="fa fa-check"></i><b>5.5.1</b> Creating HTML dependency objects</a></li>
+<li class="chapter" data-level="5.5.2" data-path="advanced-ui.html"><a href="advanced-ui.html#using-html-dependency-objects"><i class="fa fa-check"></i><b>5.5.2</b> Using HTML dependency objects</a></li>
 </ul></li>
 </ul></li>
+<li class="part"><span><b>Mastering reactivity</b></span></li>
 <li class="chapter" data-level="6" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html"><i class="fa fa-check"></i><b>6</b> Understanding reactive programming</a><ul>
-<li class="chapter" data-level="" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#introduction-4"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="6.1" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#introduction-4"><i class="fa fa-check"></i><b>6.1</b> Introduction</a><ul>
 <li class="chapter" data-level="" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#terminology-note"><i class="fa fa-check"></i>Terminology note</a></li>
 <li class="chapter" data-level="" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#outline-4"><i class="fa fa-check"></i>Outline</a></li>
 </ul></li>
-<li class="chapter" data-level="6.1" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#motivation"><i class="fa fa-check"></i><b>6.1</b> Introducing reactive programming</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#event-driven"><i class="fa fa-check"></i><b>6.1.1</b> The traditional approach: Event-driven programming</a></li>
+<li class="chapter" data-level="6.2" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#motivation"><i class="fa fa-check"></i><b>6.2</b> Introducing reactive programming</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#event-driven"><i class="fa fa-check"></i><b>6.2.1</b> The traditional approach: Event-driven programming</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#primitives"><i class="fa fa-check"></i><b>6.2</b> The building blocks of reactive programming</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#reactive-values-values-that-change-over-time"><i class="fa fa-check"></i><b>6.2.1</b> Reactive values: values that change over time</a></li>
-<li class="chapter" data-level="6.2.2" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#observers-actions-that-execute-automatically"><i class="fa fa-check"></i><b>6.2.2</b> Observers: Actions that execute automatically</a></li>
-<li class="chapter" data-level="6.2.3" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#reactive-expressions-smart-calculations"><i class="fa fa-check"></i><b>6.2.3</b> Reactive expressions: Smart calculations</a></li>
-<li class="chapter" data-level="6.2.4" data-path="basic-ui.html"><a href="basic-ui.html#outputs"><i class="fa fa-check"></i><b>6.2.4</b> Outputs</a></li>
+<li class="chapter" data-level="6.3" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#primitives"><i class="fa fa-check"></i><b>6.3</b> The building blocks of reactive programming</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#reactive-values-values-that-change-over-time"><i class="fa fa-check"></i><b>6.3.1</b> Reactive values: values that change over time</a></li>
+<li class="chapter" data-level="6.3.2" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#observers-actions-that-execute-automatically"><i class="fa fa-check"></i><b>6.3.2</b> Observers: Actions that execute automatically</a></li>
+<li class="chapter" data-level="6.3.3" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#reactive-expressions-smart-calculations"><i class="fa fa-check"></i><b>6.3.3</b> Reactive expressions: Smart calculations</a></li>
+<li class="chapter" data-level="6.3.4" data-path="basic-ui.html"><a href="basic-ui.html#outputs"><i class="fa fa-check"></i><b>6.3.4</b> Outputs</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#example"><i class="fa fa-check"></i><b>6.3</b> An example: CRAN download logs</a><ul>
-<li class="chapter" data-level="6.3.1" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#what-are-the-inputs-for-the-user-to-provide"><i class="fa fa-check"></i><b>6.3.1</b> 1. What are the inputs for the user to provide?</a></li>
-<li class="chapter" data-level="6.3.2" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#what-are-the-conceptual-steps-performed-in-the-script"><i class="fa fa-check"></i><b>6.3.2</b> 2. What are the conceptual “steps” performed in the script?</a></li>
-<li class="chapter" data-level="6.3.3" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#for-each-of-the-steps-performed-is-it-a-calculation-an-output-or-a-task"><i class="fa fa-check"></i><b>6.3.3</b> 3. For each of the steps performed: is it a <em>calculation</em>, an <em>output</em>, or a <em>task</em>?</a></li>
+<li class="chapter" data-level="6.4" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#example"><i class="fa fa-check"></i><b>6.4</b> An example: CRAN download logs</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#what-are-the-inputs-for-the-user-to-provide"><i class="fa fa-check"></i><b>6.4.1</b> 1. What are the inputs for the user to provide?</a></li>
+<li class="chapter" data-level="6.4.2" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#what-are-the-conceptual-steps-performed-in-the-script"><i class="fa fa-check"></i><b>6.4.2</b> 2. What are the conceptual “steps” performed in the script?</a></li>
+<li class="chapter" data-level="6.4.3" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#for-each-of-the-steps-performed-is-it-a-calculation-an-output-or-a-task"><i class="fa fa-check"></i><b>6.4.3</b> 3. For each of the steps performed: is it a <em>calculation</em>, an <em>output</em>, or a <em>task</em>?</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#dependency-tracking"><i class="fa fa-check"></i><b>6.4</b> Demystifying dependency tracking</a><ul>
-<li class="chapter" data-level="6.4.1" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#how-dependency-tracking-works"><i class="fa fa-check"></i><b>6.4.1</b> How dependency tracking works</a></li>
+<li class="chapter" data-level="6.5" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#dependency-tracking"><i class="fa fa-check"></i><b>6.5</b> Demystifying dependency tracking</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#how-dependency-tracking-works"><i class="fa fa-check"></i><b>6.5.1</b> How dependency tracking works</a></li>
 </ul></li>
-<li class="chapter" data-level="6.5" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#step-through"><i class="fa fa-check"></i><b>6.5</b> A step-by-step tour of reactive execution</a><ul>
-<li class="chapter" data-level="6.5.1" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#a-session-begins"><i class="fa fa-check"></i><b>6.5.1</b> A session begins</a></li>
-<li class="chapter" data-level="6.5.2" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#execution-begins"><i class="fa fa-check"></i><b>6.5.2</b> Execution begins</a></li>
-<li class="chapter" data-level="6.5.3" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#reading-a-reactive-expression"><i class="fa fa-check"></i><b>6.5.3</b> Reading a reactive expression</a></li>
-<li class="chapter" data-level="6.5.4" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#reading-an-input"><i class="fa fa-check"></i><b>6.5.4</b> Reading an input</a></li>
-<li class="chapter" data-level="6.5.5" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#reactive-expression-completes"><i class="fa fa-check"></i><b>6.5.5</b> Reactive expression completes</a></li>
-<li class="chapter" data-level="6.5.6" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#observer-completes"><i class="fa fa-check"></i><b>6.5.6</b> Observer completes</a></li>
-<li class="chapter" data-level="6.5.7" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#the-next-observer-executes"><i class="fa fa-check"></i><b>6.5.7</b> The next observer executes</a></li>
-<li class="chapter" data-level="6.5.8" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#execution-completes-outputs-flushed"><i class="fa fa-check"></i><b>6.5.8</b> Execution completes, outputs flushed</a></li>
-<li class="chapter" data-level="6.5.9" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#an-input-changes"><i class="fa fa-check"></i><b>6.5.9</b> An input changes</a></li>
-<li class="chapter" data-level="6.5.10" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#notifying-dependents"><i class="fa fa-check"></i><b>6.5.10</b> Notifying dependents</a></li>
-<li class="chapter" data-level="6.5.11" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#removing-relationships"><i class="fa fa-check"></i><b>6.5.11</b> Removing relationships</a></li>
-<li class="chapter" data-level="6.5.12" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#reexecution"><i class="fa fa-check"></i><b>6.5.12</b> Reexecution</a></li>
+<li class="chapter" data-level="6.6" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#step-through"><i class="fa fa-check"></i><b>6.6</b> A step-by-step tour of reactive execution</a><ul>
+<li class="chapter" data-level="6.6.1" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#a-session-begins"><i class="fa fa-check"></i><b>6.6.1</b> A session begins</a></li>
+<li class="chapter" data-level="6.6.2" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#execution-begins"><i class="fa fa-check"></i><b>6.6.2</b> Execution begins</a></li>
+<li class="chapter" data-level="6.6.3" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#reading-a-reactive-expression"><i class="fa fa-check"></i><b>6.6.3</b> Reading a reactive expression</a></li>
+<li class="chapter" data-level="6.6.4" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#reading-an-input"><i class="fa fa-check"></i><b>6.6.4</b> Reading an input</a></li>
+<li class="chapter" data-level="6.6.5" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#reactive-expression-completes"><i class="fa fa-check"></i><b>6.6.5</b> Reactive expression completes</a></li>
+<li class="chapter" data-level="6.6.6" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#observer-completes"><i class="fa fa-check"></i><b>6.6.6</b> Observer completes</a></li>
+<li class="chapter" data-level="6.6.7" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#the-next-observer-executes"><i class="fa fa-check"></i><b>6.6.7</b> The next observer executes</a></li>
+<li class="chapter" data-level="6.6.8" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#execution-completes-outputs-flushed"><i class="fa fa-check"></i><b>6.6.8</b> Execution completes, outputs flushed</a></li>
+<li class="chapter" data-level="6.6.9" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#an-input-changes"><i class="fa fa-check"></i><b>6.6.9</b> An input changes</a></li>
+<li class="chapter" data-level="6.6.10" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#notifying-dependents"><i class="fa fa-check"></i><b>6.6.10</b> Notifying dependents</a></li>
+<li class="chapter" data-level="6.6.11" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#removing-relationships"><i class="fa fa-check"></i><b>6.6.11</b> Removing relationships</a></li>
+<li class="chapter" data-level="6.6.12" data-path="understanding-reactive-programming.html"><a href="understanding-reactive-programming.html#reexecution"><i class="fa fa-check"></i><b>6.6.12</b> Reexecution</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -243,62 +244,138 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="basic-ui" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Basic UI</h1>
-<div id="introduction-1" class="section level2 unnumbered">
-<h2>Introduction</h2>
-<p>As you saw in the previous chapter, Shiny encourages separation of the code that generates your user interface (<code>ui</code>) from the code that drives your app’s behavior (<code>server</code>). In this chapter, we’ll dive much deeper into the UI side of things.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">source</span>(<span class="st">&quot;common.R&quot;</span>)</code></pre></div>
+<div id="introduction-1" class="section level2">
+<h2><span class="header-section-number">3.1</span> Introduction</h2>
+<p>Now that you’ve got a basic app under your belt, we’re going to explore the details that make it tick. As you saw in the previous chapter, Shiny encourages separation of the code that generates your user interface (<code>ui</code>) from the code that drives your app’s behavior (<code>server</code>). In this chapter, we’ll dive deeper into the UI side of things.</p>
 <p>All web pages are constructed out of HTML, and Shiny user interfaces are no different–although they are generally expressed using R, their ultimate job is to produce HTML. As a Shiny app author, you can use high-level layout functions in R that keep you far away from the details of HTML. You can also work with HTML tags directly to achieve any level of customization you want. These approaches are by no means exclusive; you can mix high-level functions with low-level HTML as much as you like.</p>
-<p>This chapter will focus on some of the high-level R functions that Shiny provides for input, output, and layout, while the chapter on <a href="advanced-ui.html#advanced-ui">Advanced UI</a> delves into using lower-level features for authoring HTML directly. If you’re new to Shiny, you should read this chapter regardless of your level of HTML knowledge, as inputs and outputs are essential parts of any Shiny app.</p>
+<p>This chapter will focus on some of the high-level R functions that Shiny provides for input, output, and layout, while Chapter <a href="advanced-ui.html#advanced-ui">5</a> will delve into using lower-level features for authoring HTML directly.</p>
+<div id="prerequisites" class="section level3 unnumbered">
+<h3>Prerequisites</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(shiny)</code></pre></div>
+</div>
 <div id="outline-1" class="section level3 unnumbered">
 <h3>Outline</h3>
 <ul>
-<li>Section <a href="basic-ui.html#inputs">3.1</a> covers input controls.</li>
-<li>Section <a href="basic-ui.html#outputs">3.2</a> covers output containers.</li>
-<li>Section <a href="basic-ui.html#layout">3.3</a> covers page and layout functions, which you can use to arrange inputs and outputs.</li>
+<li><p>Section <a href="basic-ui.html#inputs">3.2</a> covers input controls.</p></li>
+<li><p>Section <a href="basic-ui.html#outputs">3.3</a> covers output containers.</p></li>
+<li><p>Section <a href="basic-ui.html#layout">3.4</a> covers layout functions, which you can use to arrange inputs and outputs.</p></li>
 </ul>
 </div>
 </div>
 <div id="inputs" class="section level2">
-<h2><span class="header-section-number">3.1</span> Inputs</h2>
-<p>As we saw in the previous chapter, functions like <code>sliderInput</code>, <code>selectInput</code>, <code>textInput</code>, and <code>numericInput</code> are used to insert input controls into your UI.</p>
-<p>The first parameter of an input function is always the input ID; this is a simple string that is composed of alphanumeric characters and/or underscore (no spaces, dashes, periods, or other special characters please!). Generally, there is a second parameter <code>label</code> that is used to create a human-readable label for the control. Any remaining parameters are specific to the particular input function, and can be used to customize the input control.</p>
+<h2><span class="header-section-number">3.2</span> Inputs</h2>
+<p>As we saw in the previous chapter, functions like <code>sliderInput()</code>, <code>selectInput()</code>, <code>textInput()</code>, and <code>numericInput()</code> are used to insert input controls into your UI.</p>
+<p>The first parameter of an input function is always the <code>inputId</code>; this is a simple string made up of numbers, letters, and underscores (no spaces, dashes, periods, or other special characters allowed!). Most input function have a second parameter, <code>label</code>, that is used to create a human-readable label for the control. Any remaining parameters are specific to the particular input function, and can be used to customize the input control.</p>
 <p>For example, a typical call to <code>sliderInput</code> might look something like this:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">shiny<span class="op">::</span><span class="kw">sliderInput</span>(<span class="st">&quot;min&quot;</span>, <span class="st">&quot;Limit (minimum)&quot;</span>, <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="dv">100</span>, <span class="dt">value =</span> <span class="dv">50</span>)</code></pre></div>
-<p>In the server function, the value of this slider would be accessed via <code>input$min</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sliderInput</span>(<span class="st">&quot;min&quot;</span>, <span class="st">&quot;Limit (minimum)&quot;</span>, <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="dv">100</span>, <span class="dt">value =</span> <span class="dv">50</span>)</code></pre></div>
+<p>In the server function, the value of this slider would be accessed via <code>input$min</code>. Note that we omit the argument names for <code>inputId</code> and <code>label</code>, and use the full names for all other arguments.</p>
 <p>It’s absolutely vital that each input have a <em>unique</em> ID. Using the same ID value for more than one input or output in the same app will result in errors or incorrect results.</p>
 <p>Shiny itself comes with a variety of input functions out of the box:</p>
 <ul>
-<li><code>sliderInput</code></li>
-<li><code>selectInput</code>/<code>selectizeInput</code></li>
-<li><code>checkboxGroupInput</code>/<code>checkboxInput</code>/<code>radioButtons</code></li>
-<li><code>dateInput</code>/<code>dateRangeInput</code></li>
-<li><code>fileInput</code></li>
-<li><code>numericInput</code></li>
-<li><code>textInput</code>/<code>passwordInput</code></li>
-<li><code>actionButton</code></li>
+<li><p>To collect numeric values, you can create a slider with <code>sliderInput()</code>, or a constraind textbox with <code>numericInput()</code>.</p></li>
+<li><p>To collect free text use <code>textInput()</code>, and to input password use <code>passwordInput()</code>.</p></li>
+<li><p>To select from a set of prespecified values, use <code>selectInput()</code> or <code>radioButton()</code>.</p></li>
+<li><p>To collect the answer to yes/no questions, try <code>checkboxInput()</code> or <code>checkboxGroupInput()</code>.</p></li>
+<li><p>To pick a date or a range of dates, try <code>dateInput()</code> and <code>dateRangeInput()</code>.</p></li>
+<li><p>To let the user upload a file, use <code>fileInput()</code>.</p></li>
 </ul>
-<p>Each input function has its own unique look and functionality, and takes different arguments. But they all share the same two properties of 1) taking a unique input ID, and 2) exposing values to the server function via a slot in the <code>input</code> object.</p>
+<p>Each input function has its own unique look and functionality, and takes different arguments. But they all share the same two important properties:</p>
+<ul>
+<li>They <strong>take</strong> a unique input ID,</li>
+<li>They <strong>expose</strong> values to server function using the corresponding element of the <code>input</code> object.</li>
+</ul>
 </div>
 <div id="outputs" class="section level2">
-<h2><span class="header-section-number">3.2</span> Outputs</h2>
-<p>Output functions are used to tell Shiny <em>where</em> and <em>how</em> to place outputs that are defined in the app’s server.</p>
-<p>Like inputs, outputs take a unique ID as their first argument. These IDs must be unique among all inputs <em>and</em> outputs!</p>
-<p>Unlike inputs, outputs generally start out as empty rectangles, that need to be fed data from the server in order to actually appear.</p>
+<h2><span class="header-section-number">3.3</span> Outputs</h2>
+<p>Output functions are used to tell Shiny <em>where</em> and <em>how</em> to place outputs that are defined in the app’s server. Like inputs, outputs take a unique ID as their first argument, and are paired with server code. Outputs generally start out as empty rectangles and need to be fed data from the server in order to actually appear.</p>
+<p>Shiny comes with a number of built-in output functions that provide useful tools:</p>
+<ul>
+<li>Show the user images with <code>imageOutput()</code>, and plots with <code>plotOutput()</code>.</li>
+<li>Output text with <code>textOutput()</code>, and code with <code>verbatimTextOutput()</code>.</li>
+<li>Generate tables of data with <code>tableOutput()</code> and <code>dataTableOutput()</code></li>
+</ul>
+<p>Note that <code>inputId</code>s and <code>outputId</code>s share the same names, and their IDs must be unique among all inputs <em>and</em> outputs. This is because some controls can serve as both inputs <em>and</em> outputs, as you’ll learn about in Chapter XYZ.</p>
 </div>
 <div id="layout" class="section level2">
-<h2><span class="header-section-number">3.3</span> Layouts and panels</h2>
-<p>Shiny includes several classes of UI functions that behave like neither inputs nor outputs. Rather, these functions help with the layout and formatting of your UI.</p>
+<h2><span class="header-section-number">3.4</span> Layouts</h2>
+<p>Shiny includes several classes of UI functions that are used to layout inputs and outputs within the app. This chapter focuses on the built-in components centered around <code>fluidPage()</code> and <code>fixedPage()</code> as these provide the structure seen in the most common style of shiny apps. In future chapters you’ll learn about other layout families like dashboards and dialog boxes.</p>
+<p>Layouts are composed hierarchically. When you see code like this:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">fluidPage</span>(
+  <span class="kw">titlePanel</span>(<span class="st">&quot;Hello Shiny!&quot;</span>),
+  <span class="kw">sidebarLayout</span>(
+    <span class="kw">sidebarPanel</span>(
+      <span class="kw">sliderInput</span>(<span class="st">&quot;obs&quot;</span>, <span class="st">&quot;Observations:&quot;</span>, <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="dv">1000</span>, <span class="dt">value =</span> <span class="dv">500</span>)
+    ),
+    <span class="kw">mainPanel</span>(
+      <span class="kw">plotOutput</span>(<span class="st">&quot;distPlot&quot;</span>)
+    )
+  )
+)</code></pre></div>
+<p>First skim it by focusing on the hierarchy of the function calls:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">fluidPage</span>(
+  <span class="kw">titlePanel</span>(),
+  <span class="kw">sidebarLayout</span>(
+    <span class="kw">sidebarPanel</span>(
+      <span class="kw">sliderInput</span>(<span class="st">&quot;obs&quot;</span>)
+    ),
+    <span class="kw">mainPanel</span>(
+      <span class="kw">plotOutput</span>(<span class="st">&quot;distPlot&quot;</span>)
+    )
+  )
+)</code></pre></div>
+<p>Even without knowing anying about the layout functions you can read the function names to guess what this app is going to look like. You can imagine that this is going to generate a classic website design: a title bar at top, followed by a sidebar (containing a slider) and a main panel containing a plot.</p>
 <div id="page-functions" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> Page functions</h3>
-<p>The first function you’re likely to encounter in a Shiny UI is a page function. Page functions expect to be the outermost function call in your UI, and set up your web page to contain other content.</p>
-<p>The most common page function is <code>fluidPage</code>.</p>
+<h3><span class="header-section-number">3.4.1</span> Page functions</h3>
+<p>The first layout function you’ll encounter in the UI is a page function. Page functions don’t do anything by themselves, but set up the HTML, CSS, and JS that the page needs. The most common page function is <code>fluidPage()</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">fluidPage</span>(..., <span class="dt">title =</span> <span class="ot">NULL</span>, <span class="dt">theme =</span> <span class="ot">NULL</span>)</code></pre></div>
-<p><code>fluidPage</code> sets up your page to use the Bootstrap CSS framework. Bootstrap provides your web page with attractive settings for typography and spacing, and also preloads dozens of CSS rules that can be invoked to visually organize and enhance specific areas of your UI. We’ll take advantage of quite a few of these Bootstrap rules as we proceed through this chapter.</p>
-<p>The “fluid” in <code>fluidPage</code> means the page’s content may resize its width (but not height) as the size of the browser window changes. (The other option is “fixed”, which means the page contents will never exceed 960 pixels in width.)</p>
-<ul>
-<li>sidebar</li>
-<li>tabset</li>
-<li>bootstrap grid</li>
-</ul>
+<p><code>fluidPage()</code> sets up your page to use the Bootstrap CSS framework, <a href="https://getbootstrap.com" class="uri">https://getbootstrap.com</a>. Bootstrap provides your web page with attractive settings for typography and spacing, and also preloads dozens of CSS rules that can be invoked to visually organize and enhance specific areas of your UI. We’ll take advantage of quite a few of these Bootstrap rules as we proceed through this chapter.</p>
+<p>The “fluid” in <code>fluidPage</code> means the page’s content may resize its width (but not height) as the size of the browser window changes. The other option is <code>fixedPage()</code>, which means the page contents will never exceed 960 pixels in width.</p>
+<p>Inside the page function, you use more layout functions to define the basic structure of the app. Here I’ll introduce you to two common structures: a page with sidebars, and a multirow app.</p>
+</div>
+<div id="page-with-sidebar" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Page with sidebar</h3>
+<p>A great structure for simple shiny apps is a two-column layout where the interactive controls appear in a sidebar on the left, and the results appear in the right. This is easy to construct with <code>sidebarLayout()</code> and friends. The basic code structure looks like this:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">fluidPage</span>(
+  <span class="kw">headerPanel</span>(
+    <span class="co"># app title/description</span>
+  ),
+  <span class="kw">sidebarLayout</span>(
+    <span class="kw">sidebarPanel</span>(
+      <span class="co"># inputs</span>
+    ),
+    <span class="kw">mainPanel</span>(
+      <span class="co"># outputs</span>
+    )
+  )
+)</code></pre></div>
+<p>And generates an app with this basic structure:</p>
+<p><img src="diagrams/basic-ui/sidebar.png" /><!-- --></p>
+</div>
+<div id="multi-row" class="section level3">
+<h3><span class="header-section-number">3.4.3</span> Multi-row</h3>
+<p>You’ll need greater flexibilty for more complex apps, and the next step up in complexity in the multirow layout. This is defined by any number of <code>fluidRow()</code> calls, each of which contains one or more <code>column()</code>s. The basic structure looks like this:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">fluidPage</span>(
+  <span class="kw">fluidRow</span>(
+    <span class="kw">column</span>(<span class="dv">4</span>, 
+      ...
+    ),
+    <span class="kw">column</span>(<span class="dv">8</span>, 
+      ...
+    )
+  ),
+  <span class="kw">fluidRow</span>(
+    <span class="kw">column</span>(<span class="dv">6</span>, 
+      ...
+    ),
+    <span class="kw">column</span>(<span class="dv">6</span>, 
+      ...
+    )
+  )
+)</code></pre></div>
+<p>which generates a layout like this:</p>
+<p><img src="diagrams/basic-ui/multirow.png" /><!-- --></p>
+<p>Column widths must add up to 12, but this still gives you substantial flexibility. You can easily create 2-, 3-, or 4- column layouts (more than that starts to get cramped), or sidebars that are narrower or wider than the default in <code>sidebarLayout()</code>.</p>
 
 </div>
 </div>
@@ -309,7 +386,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         </div>
       </div>
 <a href="your-first-shiny-app.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="advanced-ui.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="reactivity-intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -339,7 +416,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-basic-ui.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/basic-ui.Rmd",
 "text": "Edit"
 },
 "history": {
