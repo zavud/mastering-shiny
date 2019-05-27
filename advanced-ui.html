@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Advanced UI | Mastering Shiny</title>
   <meta name="description" content="The official guide to the Shiny web application framework for R." />
-  <meta name="generator" content="bookdown  and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.10.2 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Advanced UI | Mastering Shiny" />
   <meta property="og:type" content="book" />
@@ -370,13 +370,9 @@ Nor will this.
 <p>In htmltools, we create the same trees of parent tags and child tags/text as in raw HTML, but we do so using R function calls instead of angle brackets. For example, this HTML from an earlier example:</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;p</span><span class="ot"> id=</span><span class="st">&quot;storage-low-message&quot;</span><span class="ot"> class=</span><span class="st">&quot;message warning&quot;</span><span class="kw">&gt;</span>Storage space is running low!<span class="kw">&lt;/p&gt;</span></code></pre></div>
 <p>would look like this in R:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(htmltools)</code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;htmltools&#39;</code></pre>
-<pre><code>## The following object is masked _by_ &#39;.GlobalEnv&#39;:
-## 
-##     knit_print.shiny.tag</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">p</span>(<span class="dt">id=</span><span class="st">&quot;storage-low-message&quot;</span>, <span class="dt">class=</span><span class="st">&quot;message warning&quot;</span>, <span class="st">&quot;Storage space is running low!&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(htmltools)
+
+<span class="kw">p</span>(<span class="dt">id=</span><span class="st">&quot;storage-low-message&quot;</span>, <span class="dt">class=</span><span class="st">&quot;message warning&quot;</span>, <span class="st">&quot;Storage space is running low!&quot;</span>)</code></pre></div>
 <p id="storage-low-message" class="message warning">Storage space is running low!</p>
 <p>This function call returns a tag object; when printed at the console, it displays its raw HTML code, and when included in Shiny UI, its HTML becomes part of the user interface.</p>
 <p>Look carefully and you’ll notice:</p>
@@ -591,6 +587,12 @@ footer div<span class="fl">.alert</span> <span class="kw">{</span>
 <div id="inline-style-tag-with-tagsstyle" class="section level4">
 <h4><span class="header-section-number">4.3.2.1</span> Inline style tag with <code>tags$style</code></h4>
 <p>If you have one or two very simple rules, the easiest way to add CSS is by inserting a <code>&lt;style&gt;</code> tag, using <code>tags$style()</code>. This can go almost anywhere in your UI.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(shiny)</code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;shiny&#39;</code></pre>
+<pre><code>## The following object is masked _by_ &#39;.GlobalEnv&#39;:
+## 
+##     knit_print.shiny.tag</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(
   tags<span class="op">$</span><span class="kw">style</span>(<span class="kw">HTML</span>(<span class="st">&quot;</span>
 <span class="st">    body, pre { font-size: 18pt; }</span>

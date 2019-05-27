@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Your first Shiny app | Mastering Shiny</title>
   <meta name="description" content="The official guide to the Shiny web application framework for R." />
-  <meta name="generator" content="bookdown  and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.10.2 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Your first Shiny app | Mastering Shiny" />
   <meta property="og:type" content="book" />
@@ -323,7 +323,7 @@ server &lt;-<span class="st"> </span><span class="cf">function</span>(input, out
 <div id="server-function" class="section level2">
 <h2><span class="header-section-number">2.4</span> Adding behavior</h2>
 <p>Next, we’ll bring the outputs to life by defining them in the server function.</p>
-<p>You may be aware that Shiny uses a <em>reactive programming</em> framework to make apps interactive. We’ll explore reactive programming in much more detail in a future chapter (TODO: XREF), but for now, just be aware that it often involves telling Shiny <em>how</em> to perform a computation, not ordering Shiny to actually go <em>do it</em>. It’s like the difference between giving someone a recipe, versus demanding they go make you a sandwich.</p>
+<p>Shiny uses a <em>reactive programming</em> framework to make apps interactive. We’ll explore reactive programming in much more detail in a future chapter (TODO: XREF), but for now, just be aware that it often involves telling Shiny <em>how</em> to perform a computation, not ordering Shiny to actually go <em>do it</em>. It’s like the difference between giving someone a recipe, versus demanding they go make you a sandwich.</p>
 <p>In this simple case, we’re going to tell Shiny how to fill in the <code>summary</code> and <code>table</code> outputs—we’re providing the “recipes” for those outputs. Replace your empty <code>server</code> function with this:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {
   output<span class="op">$</span>summary &lt;-<span class="st"> </span><span class="kw">renderPrint</span>({
@@ -341,7 +341,7 @@ server &lt;-<span class="st"> </span><span class="cf">function</span>(input, out
   <span class="co"># Expression that generates whatever kind of output</span>
   <span class="co"># renderTYPE expects</span>
 })</code></pre></div>
-<p>The left-hand side of the assignment operator (<code>&lt;-</code>), <code>output$IDENTIFIER</code>, indicates that you’re providing the recipe for the Shiny output with the matching ID. (Note that the ID is provided in quotes in the UI, but without quotes in the server.)</p>
+<p>The left-hand side of the assignment operator (<code>&lt;-</code>), <code>output$IDENTIFIER</code>, indicates that you’re providing the recipe for the Shiny output with the matching ID. (Note that the ID is quoted in the UI, but not in the server.)</p>
 <p>The right-hand side of the assignment specifies uses a specific <em>render function</em> to wrap a code block that you provide; in the example above, we use <code>renderPrint</code> and <code>renderTable</code> wrap our app-specific logic. Each <code>renderXXX</code> function is designed to work with a particular <code>xxxOutput</code> function (and vice versa).</p>
 <p>Each <code>renderXXX</code> function also has expectations about what kind of objects should be returned (or what actions taken, like plotting or printing to the console) from its code block.</p>
 <p>In this case, we’re using <code>renderPrint</code> for the <code>summary</code> output. <code>renderPrint</code> is designed to be used with <code>verbatimTextOutput</code>. Whenever <code>renderPrint</code> executes its code body, it captures any output that would normally go to the R console, and sends it to the <code>verbatimTextOutput</code>.</p>
