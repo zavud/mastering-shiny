@@ -70,7 +70,7 @@ If you're not using RStudio, you can use `setwd()` to change the current working
 
 You should see a web application launch in a new window, with only the words "Hello, world!"
 
-![](images/02-your-first-shiny-app/helloworld.png)<!-- -->
+<img src="images/02-your-first-shiny-app/helloworld.png" width="735" />
 
 This is RStudio's Shiny app window. From here, you can click "Open in Browser" to view the app in your system default web browser, which can be helpful for testing or debugging. (If you prefer to always launch straight into your system default web browser, or alternatively, in RStudio's Viewer pane, you can use the Run App button's dropdown menu to choose one of those instead.)
 

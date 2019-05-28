@@ -173,7 +173,7 @@ fluidPage(
 
 And generates an app with this basic structure:
 
-![](diagrams/basic-ui/sidebar.png)<!-- -->
+<img src="diagrams/basic-ui/sidebar.png" width="336" />
 
 ### Multi-row
 
@@ -203,6 +203,6 @@ fluidPage(
 
 which generates a layout like this:
 
-![](diagrams/basic-ui/multirow.png)<!-- -->
+<img src="diagrams/basic-ui/multirow.png" width="336" />
 
 Column widths must add up to 12, but this still gives you substantial flexibility. You can easily create 2-, 3-, or 4- column layouts (more than that starts to get cramped), or sidebars that are narrower or wider than the default in `sidebarLayout()`.

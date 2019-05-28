@@ -203,7 +203,7 @@ By careful inspection of the code, we can see that `input$count` affects both ou
 
 As your shiny apps get more complex, you'll find that carefully drawing out the graph of reactive inputs and outputs helps you to understand what's going on. The following diagram introduces you to the basic conventions we'll use throughout this book.
 
-![](diagrams/reactivity-intro/input-output.png)<!-- -->
+<img src="diagrams/reactivity-intro/input-output.png" width="268" />
 
 The point of this example is to demonstrate that Shiny doesn't simply re-render all of its outputs whenever an input has changed. Somehow, without a lot of help from us, Shiny figures out which inputs should affect which outputs. This is the most "magical" aspect of reactive programming, and we'll eventually pull back the curtain; for now, just trust that it works.
 
@@ -246,7 +246,7 @@ server <- function(input, output, session) {
 
 This leads to the following reactivity diagram. You can see that we're starting to develop a more complex graph. We'll come back to exactly how events flow through this graph, and how Shiny ensures that it does the smallest amount of work in Chapter \@ref(reactivity-mental-model).
 
-![](diagrams/reactivity-intro/input-reactive-output.png)<!-- -->
+<img src="diagrams/reactivity-intro/input-reactive-output.png" width="340" />
 
 Reactive expressions are extremely important for creating efficient shiny apps because they are only updated when their inputs change. This means that you can use them to encapsulate expensive operations so that they are only re-computed the minimal number of times. If you have every used a tool like `make`, this might seem familiar.
 

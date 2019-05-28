@@ -380,7 +380,7 @@ server &lt;-<span class="st"> </span><span class="cf">function</span>(input, out
 <span class="kw">shinyApp</span>(ui, server)</code></pre></div>
 <p>By careful inspection of the code, we can see that <code>input$count</code> affects both outputs, while <code>input$bins</code> affects only the plot and <code>input$rows</code> affects only the table. Run the app, and you’ll see that Shiny knows this too. If you change <code>input$bins</code>, the plot is affected but the table is not. If you change <code>input$rows</code>, the table is affected but the plot is not.</p>
 <p>As your shiny apps get more complex, you’ll find that carefully drawing out the graph of reactive inputs and outputs helps you to understand what’s going on. The following diagram introduces you to the basic conventions we’ll use throughout this book.</p>
-<p><img src="diagrams/reactivity-intro/input-output.png" /><!-- --></p>
+<p><img src="diagrams/reactivity-intro/input-output.png" width="268" /></p>
 <p>The point of this example is to demonstrate that Shiny doesn’t simply re-render all of its outputs whenever an input has changed. Somehow, without a lot of help from us, Shiny figures out which inputs should affect which outputs. This is the most “magical” aspect of reactive programming, and we’ll eventually pull back the curtain; for now, just trust that it works.</p>
 <div id="outputs-are-atomic" class="section level3">
 <h3><span class="header-section-number">4.3.1</span> Outputs are atomic</h3>
@@ -408,7 +408,7 @@ server &lt;-<span class="st"> </span><span class="cf">function</span>(input, out
   })
 }</code></pre></div>
 <p>This leads to the following reactivity diagram. You can see that we’re starting to develop a more complex graph. We’ll come back to exactly how events flow through this graph, and how Shiny ensures that it does the smallest amount of work in Chapter <a href="reactivity-mental-model.html#reactivity-mental-model">6</a>.</p>
-<p><img src="diagrams/reactivity-intro/input-reactive-output.png" /><!-- --></p>
+<p><img src="diagrams/reactivity-intro/input-reactive-output.png" width="340" /></p>
 <p>Reactive expressions are extremely important for creating efficient shiny apps because they are only updated when their inputs change. This means that you can use them to encapsulate expensive operations so that they are only re-computed the minimal number of times. If you have every used a tool like <code>make</code>, this might seem familiar.</p>
 </div>
 </div>
