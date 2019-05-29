@@ -1,9 +1,6 @@
 # Basic UI
 
 
-```r
-source("common.R")
-```
 
 ## Introduction
 
@@ -18,6 +15,11 @@ This chapter will focus on some of the high-level R functions that Shiny provide
 
 ```r
 library(shiny)
+#> 
+#> Attaching package: 'shiny'
+#> The following object is masked _by_ '.GlobalEnv':
+#> 
+#>     knit_print.shiny.tag.list
 ```
 
 ### Outline {-}
@@ -31,9 +33,20 @@ library(shiny)
 
 ## Inputs {#inputs}
 
-As we saw in the previous chapter, functions like `sliderInput()`, `selectInput()`, `textInput()`, and `numericInput()` are used to insert input controls into your UI.
+As we saw in the previous chapter, functions like `sliderInput()`, `selectInput()`, `textInput()`, and `numericInput()` are used to insert input controls into your UI. Now we'll go in to more details of the basic controls built in to shiny.
 
-The first parameter of an input function is always the `inputId`; this is a simple string made up of numbers, letters, and underscores (no spaces, dashes, periods, or other special characters allowed!). Most input function have a second parameter, `label`, that is used to create a human-readable label for the control. Any remaining parameters are specific to the particular input function, and can be used to customize the input control.
+### Basics
+
+The first parameter of an input function is always the `inputId`; this is a simple string made up of numbers, letters, and underscores (no spaces, dashes, periods, or other special characters allowed!).  It's absolutely vital that each input   have a *unique* ID. Using the same ID value for more than one input or output in the same app will result in errors or incorrect results.
+
+Most input function have a second parameter, `label`, that is used to create a human-readable label for the control. Any remaining parameters are specific to the particular input function, and can be used to customize the input control.
+
+Each input function has its own unique look and functionality, and takes different arguments. But they all share the same two important properties:
+
+* They __take__ a unique input ID. 
+
+* They __expose__ values to server function using the corresponding 
+  element of the `input` object.
 
 For example, a typical call to `sliderInput` might look something like this:
 
@@ -45,8 +58,6 @@ sliderInput("min", "Limit (minimum)", min = 0, max = 100, value = 50)
 In the server function, the value of this slider would be accessed via `input$min`. Note that we omit the argument names for `inputId` and `label`, and use the full names for all other arguments.
 
 
-
-It's absolutely vital that each input have a *unique* ID. Using the same ID value for more than one input or output in the same app will result in errors or incorrect results.
 
 Shiny itself comes with a variety of input functions out of the box:
 
@@ -67,15 +78,31 @@ Shiny itself comes with a variety of input functions out of the box:
 
 - To let the user upload a file, use `fileInput()`.
 
-Each input function has its own unique look and functionality, and takes different arguments. But they all share the same two important properties:
+The sections below illustate their basic usage. There's no attempt to exhaustively describe all the arguments. So you'll need to refer to the documentation for more details.
 
-* They __take__ a unique input ID,
-* They __expose__ values to server function using the corresponding 
-  element of the `input` object.
+### Numeric inputs
+
+
+```r
+fluidPage(
+  numericInput("num", "Number one", 0, min = 0, max = 100, step = 5),
+  sliderInput("num2", "Number two", 0, min = 0, max = 100, step = 5),
+  sliderInput("rng", "Range", c(10, 20), min = 0, max = 100, step = 5)
+)
+```
+
+### Limited choices
+
+### Free text
+
+### Yes/no questions
+
+### Dates
+
 
 ## Outputs {#outputs}
 
-Output functions are used to tell Shiny _where_ and _how_ to place outputs that are defined in the app's server. Like inputs, outputs take a unique ID as their first argument, and are paired with server code. Outputs generally start out as empty rectangles and need to be fed data from the server in order to actually appear. 
+Output functions are used to tell Shiny _where_ and _how_ to place outputs that are defined in the app's server. Like inputs, outputs take a unique ID as their first argument, and are paired with server code. Outputs generally start out as empty rectangles and need to be fed data from the server in order to actually appear.
 
 Shiny comes with a number of built-in output functions that provide useful tools:
 
@@ -83,7 +110,13 @@ Shiny comes with a number of built-in output functions that provide useful tools
 * Output text with `textOutput()`, and code with `verbatimTextOutput()`.
 * Generate tables of data with `tableOutput()` and `dataTableOutput()` 
 
-Note that `inputId`s and `outputId`s share the same names, and their IDs must be unique among all inputs _and_ outputs. This is because some controls can serve as both inputs _and_ outputs, as you'll learn about in Chapter XYZ.
+## Inputs and output 
+
+### IDs
+
+Note that both input and output controls share is that **they always take an ID string as their first argument**. It's absolutely critical that identifiers be unique! In a given app, you can't have two inputs named `"dataset"`, two outputs named `"plot"`, or an input and an output named `"choices"`. No matter how complex your app gets, you must ensure that every ID is unique. Later on, in Chapter XYZ, you'll learn about shiny modules, which provides a convenient toolkit to handle this restriction as your app grows.
+
+You should also avoid using special characters in your identifiers, especially space and dash. Generally, it's best to stick to the kind of names you'd use for variables or data frame columns in R, with the added restriction of avoiding periods. (Like R, numbers and underscores may not start an identifier, but they are permitted elsewhere.)
 
 ## Layouts {#layout}
 
@@ -206,3 +239,16 @@ which generates a layout like this:
 <img src="diagrams/basic-ui/multirow.png" width="336" />
 
 Column widths must add up to 12, but this still gives you substantial flexibility. You can easily create 2-, 3-, or 4- column layouts (more than that starts to get cramped), or sidebars that are narrower or wider than the default in `sidebarLayout()`.
+
+## Under the hood
+
+They're just functions that return HTML.
+
+
+```r
+fluidPage()
+```
+
+<pre><code>&lt;div class="container-fluid"&gt;&lt;/div&gt;</code></pre>
+
+So if you notice a common pattern in your apps you can easily construct your own function. Producing with inputs and outputs is a little trickier in a function because of the need for unique IDs. Fixing this problem is the motivation for Shiny modules, which we'll come back to in Chapter XYZ.

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Before we begin | Mastering Shiny</title>
   <meta name="description" content="The official guide to the Shiny web application framework for R." />
-  <meta name="generator" content="bookdown 0.10.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.11.1 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Before we begin | Mastering Shiny" />
   <meta property="og:type" content="book" />
@@ -123,11 +123,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#create-app"><i class="fa fa-check"></i><b>2.2</b> Create app dir and file</a></li>
 <li class="chapter" data-level="2.3" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#running"><i class="fa fa-check"></i><b>2.3</b> Running and stopping</a></li>
-<li class="chapter" data-level="2.4" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#adding-ui"><i class="fa fa-check"></i><b>2.4</b> Adding UI controls</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#input-and-output-ids"><i class="fa fa-check"></i><b>2.4.1</b> Input and output IDs</a></li>
-</ul></li>
+<li class="chapter" data-level="2.4" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#adding-ui"><i class="fa fa-check"></i><b>2.4</b> Adding UI controls</a></li>
 <li class="chapter" data-level="2.5" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#server-function"><i class="fa fa-check"></i><b>2.5</b> Adding behavior</a></li>
-<li class="chapter" data-level="2.6" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#reactive-expr"><i class="fa fa-check"></i><b>2.6</b> Extracting common values with reactive expressions</a></li>
+<li class="chapter" data-level="2.6" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#reactive-expr"><i class="fa fa-check"></i><b>2.6</b> Reducing duplication with reactive expressions</a></li>
 <li class="chapter" data-level="2.7" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercises"><i class="fa fa-check"></i><b>2.7</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a><ul>
@@ -135,13 +133,24 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="before-we-begin.html"><a href="before-we-begin.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#outline-1"><i class="fa fa-check"></i>Outline</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="basic-ui.html"><a href="basic-ui.html#inputs"><i class="fa fa-check"></i><b>3.2</b> Inputs</a></li>
-<li class="chapter" data-level="3.3" data-path="basic-ui.html"><a href="basic-ui.html#outputs"><i class="fa fa-check"></i><b>3.3</b> Outputs</a></li>
-<li class="chapter" data-level="3.4" data-path="basic-ui.html"><a href="basic-ui.html#layout"><i class="fa fa-check"></i><b>3.4</b> Layouts</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="basic-ui.html"><a href="basic-ui.html#page-functions"><i class="fa fa-check"></i><b>3.4.1</b> Page functions</a></li>
-<li class="chapter" data-level="3.4.2" data-path="basic-ui.html"><a href="basic-ui.html#page-with-sidebar"><i class="fa fa-check"></i><b>3.4.2</b> Page with sidebar</a></li>
-<li class="chapter" data-level="3.4.3" data-path="basic-ui.html"><a href="basic-ui.html#multi-row"><i class="fa fa-check"></i><b>3.4.3</b> Multi-row</a></li>
+<li class="chapter" data-level="3.2" data-path="basic-ui.html"><a href="basic-ui.html#inputs"><i class="fa fa-check"></i><b>3.2</b> Inputs</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="basic-ui.html"><a href="basic-ui.html#basics"><i class="fa fa-check"></i><b>3.2.1</b> Basics</a></li>
+<li class="chapter" data-level="3.2.2" data-path="basic-ui.html"><a href="basic-ui.html#numeric-inputs"><i class="fa fa-check"></i><b>3.2.2</b> Numeric inputs</a></li>
+<li class="chapter" data-level="3.2.3" data-path="basic-ui.html"><a href="basic-ui.html#limited-choices"><i class="fa fa-check"></i><b>3.2.3</b> Limited choices</a></li>
+<li class="chapter" data-level="3.2.4" data-path="basic-ui.html"><a href="basic-ui.html#free-text"><i class="fa fa-check"></i><b>3.2.4</b> Free text</a></li>
+<li class="chapter" data-level="3.2.5" data-path="basic-ui.html"><a href="basic-ui.html#yesno-questions"><i class="fa fa-check"></i><b>3.2.5</b> Yes/no questions</a></li>
+<li class="chapter" data-level="3.2.6" data-path="basic-ui.html"><a href="basic-ui.html#dates"><i class="fa fa-check"></i><b>3.2.6</b> Dates</a></li>
 </ul></li>
+<li class="chapter" data-level="3.3" data-path="basic-ui.html"><a href="basic-ui.html#outputs"><i class="fa fa-check"></i><b>3.3</b> Outputs</a></li>
+<li class="chapter" data-level="3.4" data-path="basic-ui.html"><a href="basic-ui.html#inputs-and-output"><i class="fa fa-check"></i><b>3.4</b> Inputs and output</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="basic-ui.html"><a href="basic-ui.html#ids"><i class="fa fa-check"></i><b>3.4.1</b> IDs</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="basic-ui.html"><a href="basic-ui.html#layout"><i class="fa fa-check"></i><b>3.5</b> Layouts</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="basic-ui.html"><a href="basic-ui.html#page-functions"><i class="fa fa-check"></i><b>3.5.1</b> Page functions</a></li>
+<li class="chapter" data-level="3.5.2" data-path="basic-ui.html"><a href="basic-ui.html#page-with-sidebar"><i class="fa fa-check"></i><b>3.5.2</b> Page with sidebar</a></li>
+<li class="chapter" data-level="3.5.3" data-path="basic-ui.html"><a href="basic-ui.html#multi-row"><i class="fa fa-check"></i><b>3.5.3</b> Multi-row</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="basic-ui.html"><a href="basic-ui.html#under-the-hood"><i class="fa fa-check"></i><b>3.6</b> Under the hood</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="reactivity-intro.html"><a href="reactivity-intro.html"><i class="fa fa-check"></i><b>4</b> Basic reactivity</a><ul>
 <li class="chapter" data-level="4.1" data-path="reactivity-intro.html"><a href="reactivity-intro.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a><ul>
@@ -155,7 +164,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="reactivity-intro.html"><a href="reactivity-intro.html#inputs-and-outputs"><i class="fa fa-check"></i><b>4.3</b> Using inputs and outputs together</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="reactivity-intro.html"><a href="reactivity-intro.html#outputs-are-atomic"><i class="fa fa-check"></i><b>4.3.1</b> Outputs are atomic</a></li>
-<li class="chapter" data-level="4.3.2" data-path="reactivity-intro.html"><a href="reactivity-intro.html#reactive-expressions"><i class="fa fa-check"></i><b>4.3.2</b> Reactive expressions</a></li>
+<li class="chapter" data-level="4.3.2" data-path="reactivity-intro.html"><a href="reactivity-intro.html#reactive-expressions-intro"><i class="fa fa-check"></i><b>4.3.2</b> Reactive expressions</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="reactivity-intro.html"><a href="reactivity-intro.html#reactivity-roadblocks"><i class="fa fa-check"></i><b>4.4</b> Reactivity roadblocks</a></li>
 </ul></li>
