@@ -147,10 +147,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="basic-ui.html"><a href="basic-ui.html#layout"><i class="fa fa-check"></i><b>3.5</b> Layouts</a><ul>
 <li class="chapter" data-level="3.5.1" data-path="basic-ui.html"><a href="basic-ui.html#page-functions"><i class="fa fa-check"></i><b>3.5.1</b> Page functions</a></li>
-<li class="chapter" data-level="3.5.2" data-path="basic-ui.html"><a href="basic-ui.html#page-with-sidebar"><i class="fa fa-check"></i><b>3.5.2</b> Page with sidebar</a></li>
-<li class="chapter" data-level="3.5.3" data-path="basic-ui.html"><a href="basic-ui.html#multi-row"><i class="fa fa-check"></i><b>3.5.3</b> Multi-row</a></li>
+<li class="chapter" data-level="3.5.2" data-path="basic-ui.html"><a href="basic-ui.html#themes"><i class="fa fa-check"></i><b>3.5.2</b> Themes</a></li>
+<li class="chapter" data-level="3.5.3" data-path="basic-ui.html"><a href="basic-ui.html#under-the-hood"><i class="fa fa-check"></i><b>3.5.3</b> Under the hood</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="basic-ui.html"><a href="basic-ui.html#under-the-hood"><i class="fa fa-check"></i><b>3.6</b> Under the hood</a></li>
+<li class="chapter" data-level="3.6" data-path="basic-ui.html"><a href="basic-ui.html#common-styles"><i class="fa fa-check"></i><b>3.6</b> Common styles</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="basic-ui.html"><a href="basic-ui.html#page-with-sidebar"><i class="fa fa-check"></i><b>3.6.1</b> Page with sidebar</a></li>
+<li class="chapter" data-level="3.6.2" data-path="basic-ui.html"><a href="basic-ui.html#multi-row"><i class="fa fa-check"></i><b>3.6.2</b> Multi-row</a></li>
+<li class="chapter" data-level="3.6.3" data-path="basic-ui.html"><a href="basic-ui.html#dashboard"><i class="fa fa-check"></i><b>3.6.3</b> Dashboard</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="reactivity-intro.html"><a href="reactivity-intro.html"><i class="fa fa-check"></i><b>4</b> Basic reactivity</a><ul>
 <li class="chapter" data-level="4.1" data-path="reactivity-intro.html"><a href="reactivity-intro.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a><ul>
@@ -382,8 +386,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 )</code></pre></div>
 <p>This is fine for very simple examples, but if you want your app to look good, you’ll need to use more layout functions to define the basic structure of the app. Here I’ll introduce you to two common structures: a page with sidebars, and a multirow app.</p>
 </div>
+<div id="themes" class="section level3">
+<h3><span class="header-section-number">3.5.2</span> Themes</h3>
+<p><a href="https://shiny.rstudio.com/gallery/shiny-theme-selector.html" class="uri">https://shiny.rstudio.com/gallery/shiny-theme-selector.html</a></p>
+</div>
+<div id="under-the-hood" class="section level3">
+<h3><span class="header-section-number">3.5.3</span> Under the hood</h3>
+<p>They’re just functions that return HTML.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">fluidPage</span>()</code></pre></div>
+<pre><code>&lt;div class="container-fluid"&gt;&lt;/div&gt;</code></pre>
+<p>So if you notice a common pattern in your apps you can easily construct your own function. Producing with inputs and outputs is a little trickier in a function because of the need for unique IDs. Fixing this problem is the motivation for Shiny modules, which we’ll come back to in Chapter XYZ.</p>
+</div>
+</div>
+<div id="common-styles" class="section level2">
+<h2><span class="header-section-number">3.6</span> Common styles</h2>
 <div id="page-with-sidebar" class="section level3">
-<h3><span class="header-section-number">3.5.2</span> Page with sidebar</h3>
+<h3><span class="header-section-number">3.6.1</span> Page with sidebar</h3>
 <p>A great structure for simple shiny apps is a two-column layout where the interactive controls appear in a sidebar on the left, and the results appear in the right. This is easy to construct with <code>sidebarLayout()</code> and friends. The basic code structure looks like this:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">fluidPage</span>(
   <span class="kw">headerPanel</span>(
@@ -402,7 +420,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><img src="diagrams/basic-ui/sidebar.png" width="336" /></p>
 </div>
 <div id="multi-row" class="section level3">
-<h3><span class="header-section-number">3.5.3</span> Multi-row</h3>
+<h3><span class="header-section-number">3.6.2</span> Multi-row</h3>
 <p>You’ll need greater flexibilty for more complex apps, and the next step up in complexity in the multirow layout. This is defined by any number of <code>fluidRow()</code> calls, each of which contains one or more <code>column()</code>s. The basic structure looks like this:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">fluidPage</span>(
   <span class="kw">fluidRow</span>(
@@ -426,14 +444,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><img src="diagrams/basic-ui/multirow.png" width="336" /></p>
 <p>Column widths must add up to 12, but this still gives you substantial flexibility. You can easily create 2-, 3-, or 4- column layouts (more than that starts to get cramped), or sidebars that are narrower or wider than the default in <code>sidebarLayout()</code>.</p>
 </div>
-</div>
-<div id="under-the-hood" class="section level2">
-<h2><span class="header-section-number">3.6</span> Under the hood</h2>
-<p>They’re just functions that return HTML.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">fluidPage</span>()</code></pre></div>
-<pre><code>&lt;div class="container-fluid"&gt;&lt;/div&gt;</code></pre>
-<p>So if you notice a common pattern in your apps you can easily construct your own function. Producing with inputs and outputs is a little trickier in a function because of the need for unique IDs. Fixing this problem is the motivation for Shiny modules, which we’ll come back to in Chapter XYZ.</p>
+<div id="dashboard" class="section level3">
+<h3><span class="header-section-number">3.6.3</span> Dashboard</h3>
+<p><a href="http://rstudio.github.io/shinydashboard/structure.html#layouts" class="uri">http://rstudio.github.io/shinydashboard/structure.html#layouts</a></p>
 
+</div>
 </div>
 </div>
             </section>

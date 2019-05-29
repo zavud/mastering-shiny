@@ -183,6 +183,25 @@ fluidPage(
 
 This is fine for very simple examples, but if you want your app to look good, you'll need to use more layout functions to define the basic structure of the app. Here I'll introduce you to two common structures: a page with sidebars, and a multirow app.
 
+### Themes
+
+<https://shiny.rstudio.com/gallery/shiny-theme-selector.html>
+
+### Under the hood
+
+They're just functions that return HTML.
+
+
+```r
+fluidPage()
+```
+
+<pre><code>&lt;div class="container-fluid"&gt;&lt;/div&gt;</code></pre>
+
+So if you notice a common pattern in your apps you can easily construct your own function. Producing with inputs and outputs is a little trickier in a function because of the need for unique IDs. Fixing this problem is the motivation for Shiny modules, which we'll come back to in Chapter XYZ.
+
+## Common styles
+
 ### Page with sidebar
 
 A great structure for simple shiny apps is a two-column layout where the interactive controls appear in a sidebar on the left, and the results appear in the right. This is easy to construct with `sidebarLayout()` and friends. The basic code structure looks like this:
@@ -240,15 +259,6 @@ which generates a layout like this:
 
 Column widths must add up to 12, but this still gives you substantial flexibility. You can easily create 2-, 3-, or 4- column layouts (more than that starts to get cramped), or sidebars that are narrower or wider than the default in `sidebarLayout()`.
 
-## Under the hood
+### Dashboard
 
-They're just functions that return HTML.
-
-
-```r
-fluidPage()
-```
-
-<pre><code>&lt;div class="container-fluid"&gt;&lt;/div&gt;</code></pre>
-
-So if you notice a common pattern in your apps you can easily construct your own function. Producing with inputs and outputs is a little trickier in a function because of the need for unique IDs. Fixing this problem is the motivation for Shiny modules, which we'll come back to in Chapter XYZ.
+<http://rstudio.github.io/shinydashboard/structure.html#layouts>
