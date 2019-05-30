@@ -8,35 +8,12 @@ In the the last chapter, we talked about creating user interfaces. Now we'll mov
 
 In Shiny, you express your server logic using reactive programming. Reactive programming is an elegant and powerful programming paradigm, but it can be disorienting at first because it's a very different paradigm to writing a script. The key idea of reactive programming is to specify a graph of dependencies so that when an input changes, all outputs are automatically updated. This makes the flow of an app considerably simpler, but it takes a while to get your head around how it all fits together.
 
-This chapter will provide a gentle walkthrough of reactive programming, introducing some of the most basic reactive constructs you'll use in your Shiny apps.
+This chapter will provide a gentle walkthrough of reactive programming, introducing some of the most basic reactive constructs you'll use in your Shiny apps. We'll start with a survey of the server function, discussing in more detail how the `input` and `output` arguments work. Next we'll review the simplest form of reactivity (where inputs are directly connected to outputs), and then discuss how reactive expressions allow you to eliminate duplicated work. We'll finish by reviewing some common roadblocks encountered by newer shiny users.
 
 
 ```r
 library(shiny)
-#> 
-#> Attaching package: 'shiny'
-#> The following object is masked _by_ '.GlobalEnv':
-#> 
-#>     knit_print.shiny.tag.list
 ```
-
-### Outline {-}
-
-* Section \@ref(server-function) introduces you to the _server function_, which 
-  will be the site of most of your reactive programming.
-  
-* Section \@ref(input) introduces the `input` object that allows you to access
-  the inputs selected in the UI.
-
-* Section \@ref(output) introduces the `output` object, a place to hang logic 
-  that populates outputs in the UI.
-
-* Section \@ref(inputs-and-outputs) shows the consequences of accessing 
-  `input` values from your `output` logic: the simplest form of reactivity.
-
-* Section \@ref(reactive-exprs) introduces _reactive expressions_, which 
-  provide a way to model intermediate computations. Reactive expressions are 
-  key to writing Shiny apps that perform well and are easy to reason about.
 
 ## The server function
 
@@ -230,6 +207,8 @@ As a human looking at this code, you might conclude that when `input$bins` chang
 
 Shiny doesn't try to be this clever. Instead, an output's render code block is always executed in its entirety, whether it's two lines of code or two hundred. In this way, each output represents an indivisible unit.
 
+### Side effects
+
 ### Reactive expressions {#reactive-expressions-intro}
 
 If you read the code above carefully you might have noticed that we're actually generating the random numbers in two different places. The table and the histogram are actually displaying the results from two unrelated datasets! To fix that problem we need to introduce one more big idea: the reactive expression. 
@@ -305,7 +284,9 @@ We get the correct behavior this time, at least—we're calling `getDataset()` f
 
 To summarize: while variables calculate the value only once (not often enough), and functions calculate the value every time they're called (too often), reactive expressions calculate the value only when it might have changed (just right!).
 
+## Controlling effect flow
 
+Buttons and observers.
 
 ## Reactivity roadblocks
 
